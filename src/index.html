@@ -5,11 +5,14 @@
     <meta name="description" content="Это моё начало... ">
     <meta name="author" content="Matvey">
     <meta name="robots" content="all">
+    <meta name=”viewport” content=”width=device-width, initial-scale=1.0”>
     
     <meta property="og:title" content="This is my world">
     <title>Матвей Кубланов - веб-начинающий</title>
     <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
     <link rel="stylesheet" href="css/animate.min.css"/>
 </head>
 <body>
@@ -23,8 +26,10 @@
    
     <header>
         <nav>
-            <div class="logo">Матвей Кубланов</div>
-            <div class="menu"><ul>
+           <div class="container">
+               <div class="row align-items-start">
+                   <div class="col-2"><div class="logo">Матвей Кубланов</div></div>
+                   <div class="col-6"><div class="menu"><ul>
                 <li><a href="about_me.html" target="blank">Обо мне</a></li>
                 <li><a href="services.html" target="blank">Услуги</a></li>
                 <li><a href="cases.html" target="blank">Кейсы</a></li>
@@ -32,14 +37,18 @@
                 <li><a href="reviews.html" target="blank">Отзывы</a></li>
                 <li><a href="contacts.html" target="blank">Контакты</a></li>
                 
-            </ul></div>
+            </ul></div></div>
+               </div>
+           </div>
+            
+            
         </nav>
     </header> 
 <main>
     <section class="main">
         <div class="title__container">
             <h1>Привет <br>Я Матвей Кубланов</h1>
-            <h4>Просто начинающий веб-дизайнер с большим будущим</h4>
+            <h4><i class="fa fa-user-circle" aria-hidden="true"></i> Просто начинающий веб-дизайнер с большим будущим</h4>
             <a href="about_me.html"><input type="button" value="Обо мне"></a>
             <a href="cases.html"><input type="button" value="Мои работы"></a>
         </div>
