@@ -81,10 +81,9 @@ nav{
     z-index: 998;
 }
 .logo{
-    font-size:30px;
+    font-size:25px;
     color: #000;
     line-height: 60px;
-    padding-left: 388px;
     float: left;
     -webkit-animation: coming 2s ease;
     -o-animation:coming 2s ease;
@@ -98,14 +97,13 @@ main {
 }
 .menu{
     float: left;
-    padding-left: 432px;
 }
 .menu li {
     float:left;
     line-height: 60px;
     color: #000;
     margin-right: 40px;
-    font-size: 16px;
+    font-size: 15px;
     text-transform: uppercase;
     -webkit-animation: topshift 0.4s ease forwards;
     -o-animation:topshift 0.4s ease forwards;
@@ -180,24 +178,44 @@ main {
     }
     to{
         opacity: 1;
-        margin-left: 404px
     }
 }
 .title__container {
     float: left;
-    margin: 432px 0px 0px 404px;
     color: #f10;
     text-align: center;
     opacity: 0;
+    width: 100%;
     -webkit-animation: titlemove 1s ease forwards;
     -o-animation:titlemove 1s ease forwards;
     animation:titlemove 1s ease forwards;
     -webkit-animation-delay: 2.4s;
     -o-animation-delay: 2.4s;
     animation-delay: 2.4s;
+    margin-top: 200px;
+}
+@media (max-width:991px){
+    .title__container {
+        color: black;
+        position: relative;
+        z-index: 1200;
+    }
+    .main {
+        position: relative;
+    }
+    .main::after{
+        content: "";
+        bottom: 0;
+        top: 0;
+        right: 0;
+        left: 0;
+        position: absolute;
+        background: rgba(0,0,0,0.4);
+        z-index: 1;
+    }
 }
 .title__container h1{
-    font-size: 60px;
+    font-size: 55px;
     font-weight: bold;
 }
 .title__container h4{
@@ -293,11 +311,11 @@ main {
     height: 523px;
     background: url(../img/bg1.jpg) 90% 100%/auto 100% fixed;
 }
-.container {
+.skill_container {
     width: 1170px;
     margin: 97px auto;
 }
-.container h2{
+.skill_container h2{
     font-size: 22px;
     text-align: center;
     color: #f10;
@@ -309,13 +327,13 @@ main {
     padding-top: 107px;
     font-weight: bold;
 }
-.container h3 {
+.skill_container h3 {
     font-size: 16px;
     font-weight: bold;
     margin: 5px auto;
     color: #f10;
 }
-.container .skills_item{
+.skill_container .skills_item{
     float: left;
     text-align: center;
     margin-left: 70px;
@@ -327,7 +345,7 @@ main {
     transition: all 0.5s;
     
 }
-.container .skills_item:hover{
+.skill_container .skills_item:hover{
     transform: scale(1.3);
     
 }
