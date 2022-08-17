@@ -488,49 +488,6 @@ main {
 .reviews .name {
     margin-top: 10px;
 }
-/*
-
-
-
-
-
-
-
-
-
-
-.all_cases {
-    width: 1170px;
-    margin: 0 320px;
-    
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.contacts {
-    height: 808px;
-    width: 100%;
-    background: url(../img/bg6.jpg) no-repeat;
-    text-align: center;
-    background-position: center;
-    background-size: cover;
-
-}
 .contacts h3 {
     font-size: 23px;
     text-align: center;
@@ -539,8 +496,8 @@ main {
     width: 160px;
     margin-left: auto;
     margin-right: auto;
-    padding-bottom: 31px;
-    padding-top: 100px;
+    padding-top: 31px;
+    padding-bottom: 20px;
     font-weight: bold;
     -webkit-animation: shadow 1s infinite ease alternate;
     -o-animation: shadow 1s infinite ease alternate;
@@ -555,17 +512,20 @@ main {
     }
 }
 .contacts p{
-    margin-top: 10px;
     color: white;
-    margin-bottom: 30px;
     font-size: 16px;
     font-weight: bold;
 }
-.contacts .contacts_item{
-    float: left;
+.contacts {
+    width: 100%;
+    background: url(../img/bg6.jpg) no-repeat;
     text-align: center;
-    margin-left: 100px;
-    width: 131px;
+    background-position: center;
+    background-size: cover;
+
+}
+.contacts .contacts_item{
+    text-align: center;
     -webkit-animation: shadow_contact 1s infinite ease alternate;
     -o-animation:shadow_contact 1s infinite ease alternate;
     animation:shadow_contact 1s infinite ease alternate;     
@@ -580,47 +540,36 @@ main {
     }
 }
 
-.contacts li {
+.contacts p {
     font-size: 16px;
     color: #fff;
     margin-top:5px;
 }
-.contacts ul{
-    margin-left: 530px;
-}
-
 .contacts h4 {
     font-size: 22px;
-    text-align: center;
     color: #f10;
     padding-bottom: 31px;
     padding-top: 30px;
     font-weight: bold;
 }
 .contacts .name {
-    margin-left: 30px;
     background: #d2d6dc;
-    width: 350px;
     height: 34px;
     font-size: 16px;
     
 }
-
-
 .contacts textarea {
     margin-top: 20px;
     background: #d2d6dc;
     font-size: 16px;
-    width: 734px;
     height: 95px;
-    margin-left: 28px;
     /*transform: scale(1);
     transition: all 0.2s;*/
 }
 /*.contacts textarea:focus{
     transform: scale(1.7);
 }*/
-/*
+
 @keyframes scale {
     from{
        width: 734px;
@@ -628,7 +577,7 @@ main {
     }
     to {
         width: 930px;
-        height: 115px;
+        height: 125px;
     }
 }
 .contacts textarea:focus{
@@ -658,8 +607,8 @@ main {
     transform: scale(1.2);
 }
 .contacts img {
-    margin-top: 100px;
-    margin-left:10px;
+    margin-top: 50px;
+    margin-bottom: 20px;
     display: inline-block;
     transform-origin: center;
     transform: rotate(0deg);
@@ -670,8 +619,9 @@ main {
 }
 .location {
     background: url(../img/%D0%9A%D0%B0%D1%80%D1%82%D0%B0%20%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F.png) no-repeat;
-    width: 100%;
+    display: block;
     height: 350px;
+    max-width: 100%;
 }
 
 .my_location h4 {
@@ -708,7 +658,6 @@ main {
     width: 100%;
     height: 60px;
     background: #f10;
-    text-align: center;
 }
 .copyright h {
     font-size: 20px;
@@ -716,9 +665,61 @@ main {
     color: #000;
     transform: scale(1);
     transition: all 0.2s;
-    display: inline-block;
+    display: block;
+    text-align: center;
 }
 .copyright h:hover{
     transform: scale(1.5);
 }
+/*
+
+
+
+
+
+
+
+
+
+
+.all_cases {
+    width: 1170px;
+    margin: 0 320px;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.contacts ul{
+    margin-left: 530px;
+}
+
+
+
+
+
+
+
+
+
+
+
 */
