@@ -60,6 +60,7 @@
     transform: scale(1);
   }
 }*/
+
 @font-face {
 	font-family: 'FranklinGot';
 	src: url('../fonts/framd.eot');
@@ -69,7 +70,7 @@
 }
 
 body{
-    font-family: Arial, sans-serif;
+    font-family:'FranklinGot' , sans-serif;
 }
 
 nav{
@@ -109,13 +110,14 @@ main {
     -o-animation:topshift 0.4s ease forwards;
     animation:topshift 0.4s ease forwards;
     opacity: 0;
+    font-size: 16px;
 }
 .menu a{
     color: #000;
     font-weight: 600;
 }
 .menu li a:visited{
-    color: black;
+    color: white;
     
 }
 .menu li a {
@@ -249,12 +251,13 @@ main {
 
 .about_me h2{
     color: #f10;
-    border-bottom: 2px solid #000;
-    font-size: 22px;
+    border-bottom: 2px solid #f10;
+    font-size: 24px;
     margin: 70px auto;
     padding-bottom: 20px;
     font-weight: bold;
     text-transform: uppercase;
+    width: 140px;
 }
 .about_me_container img {
     border: 1px solid #fff;
@@ -310,7 +313,7 @@ main {
     margin: 97px auto;
 }
 .skill_container h2{
-    font-size: 22px;
+    font-size: 24px;
     text-align: center;
     color: #f10;
     border-bottom: 2px solid #f10;
@@ -341,7 +344,7 @@ main {
     
 }
 .My_cases h2 {
-    font-size: 20px;
+    font-size: 22px;
     text-align: center;
     color: #f10;
     border-bottom: 2px solid #f10;
@@ -350,6 +353,7 @@ main {
     padding-bottom: 20px;
     font-weight: bold;
     text-transform: uppercase;
+    width: 140px;
 }
 .My_cases .above_cases {
     margin-top: 41px;
@@ -413,7 +417,7 @@ main {
 }
 
 .Cost_calculating h3 {
-    font-size: 22px;
+    font-size: 24px;
     text-align: center;
     color: #f10;
     margin-left: auto;
@@ -448,7 +452,7 @@ main {
 
 }
 .Statistic h4 {
-    font-size: 22px;
+    font-size: 24px;
     text-align: center;
     color: #f10;
     border-bottom: 2px solid #f10;
@@ -458,6 +462,7 @@ main {
     padding-bottom: 31px;
     padding-top: 107px;
     font-weight: bold;
+    text-transform: uppercase;
 }
 .statistic {
     background: url(../img/bg3.jpg) center/cover no-repeat fixed;
@@ -474,7 +479,7 @@ main {
     margin-top:60px;
 }
 .reviews h3{
-    font-size: 22px;
+    font-size: 24px;
     text-align: center;
     color: #f10;
     border-bottom: 2px solid #f10;
@@ -484,6 +489,7 @@ main {
     width: 100px;
      margin-left: auto;
     margin-right: auto;
+    text-transform: uppercase;
 }
 .reviews .name {
     margin-top: 10px;
@@ -563,14 +569,14 @@ main {
     background: #d2d6dc;
     font-size: 16px;
     height: 95px;
-    /*transform: scale(1);
-    transition: all 0.2s;*/
+    transform: scale(1);
+    transition: all 0.2s;
 }
-/*.contacts textarea:focus{
-    transform: scale(1.7);
-}*/
+.contacts textarea:focus{
+    transform: scale(1.15);
+}
 
-@keyframes scale {
+/*@keyframes scale {
     from{
        width: 734px;
        height: 95px; 
@@ -584,7 +590,7 @@ main {
     -webkit-animation: scale 0.2s ease forwards;
    -o-animation: scale 0.2s ease forwards;
    animation: scale 0.2s ease forwards;
-}
+}*/
 .contacts .send {
     border: 2px solid #fff;
     background: none;
@@ -670,6 +676,9 @@ main {
 }
 .copyright h:hover{
     transform: scale(1.5);
+}
+.your_message {
+    text-align: center;
 }
 /*
 
