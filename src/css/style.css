@@ -290,15 +290,22 @@ main {
     border-radius: 5px;
     margin-top: 37px;
     transform: scale (1);
-    transition: all 0.4s;
+    /*transition: all 0.4s;*/
+     transition: background-position 0.5s ease, color 0.3s ease;
     cursor: pointer;
     display:block;
     text-decoration: none;
 }
+
 .about_me_container a:hover {
-    background: red;
+    /*background: red;*/
     color: white;
+    background-size: 200% 100%;
+    background-image: linear-gradient(to left, rgba(255, 0, 0, 1) 50%, rgba(255, 255, 255, 0.43) 50%);
+    background-position: 100% 0;
+    
 }
+
 .about_me_container a:active {
     transform: scale(1.2);
 } 
