@@ -1,4 +1,4 @@
-/*.preloader {
+.preloader {
   position: fixed;
   width: 100%;
   height: 100%;
@@ -7,7 +7,7 @@
   right: 0;
   bottom: 0;
   background: #000;
-  z-index: 1001;
+  z-index: 1200;
 }
 
 .preloader__row {
@@ -59,7 +59,7 @@
   50% {
     transform: scale(1);
   }
-}*/
+}
 
 @font-face {
 	font-family: 'FranklinGot';
@@ -116,8 +116,9 @@ main {
     color: #000;
     font-weight: 600;
 }
+
 .menu li a:visited{
-    color: white;
+    /*color: white;*/
     
 }
 .menu li a {
@@ -370,11 +371,12 @@ main {
 .My_cases img{
     margin-top: 5px;
     display: block;
-    -webkit-animation: img_enter 2s ease forwards;
-    -o-animation: img_enter 2s ease forwards;
-    animation:img_enter 2s ease forwards;
+   /* -webkit-animation: imgenter 2s ease forwards;
+    -o-animation: imgenter 2s ease forwards;
+    animation:imgenter 2s ease forwards;*/
     max-width: 100%;
-@keyframes img_enter {
+    opacity: 
+/*@keyframes imgenter{
     from{
         opacity: 0;
         margin-left: -500px;
@@ -383,8 +385,15 @@ main {
         opacity: 1;
         
     }
+}*/
+   
 }
-    
+.element-animation {
+    opacity: 0;
+}
+.element-animation.show-animation{
+    opacity: 1;
+    transition: opacity 1s; 
 }
 .all_cases h3{
     font-size: 20px;
@@ -456,6 +465,7 @@ main {
 .Cost_calculating .number {
     font-size: 20px;
     font-weight: bold;
+    text-align: left;
 
 }
 .Statistic h4 {
@@ -681,9 +691,9 @@ main {
     display: block;
     text-align: center;
 }
-.copyright h:hover{
+/*.copyright h:hover{
     transform: scale(1.5);
-}
+}*/
 .your_message {
     text-align: center;
 }

@@ -34,12 +34,12 @@
                     <div class=" px-0 col-xxl-6 col-xl-7 col-lg-8 offset-xxl-4 offset-xl-2 offset-lg-1 d-none d-lg-block">
                         <div class="menu">
                             <ul>
-                                <li><a href="about_me.html" target="blank">Обо мне</a></li>
-                                <li><a href="services.html" target="blank">Услуги</a></li>
-                                <li><a href="cases.html" target="blank">Кейсы</a></li>
-                                <li><a href="price.html" target="blank">Прайс</a></li>
-                                <li><a href="reviews.html" target="blank">Отзывы</a></li>
-                                <li><a href="contacts.html" target="blank">Контакты</a></li>
+                                <li><a class="active" href="#aboutMe">Обо мне</a></li>
+                                <li><a href="#skillS">Услуги</a></li>
+                                <li><a href="#myCases">Кейсы</a></li>
+                                <li><a href="#costCalculate">Прайс</a></li>
+                                <li><a href="#reviews">Отзывы</a></li>
+                                <li><a href="#contactsItems">Контакты</a></li>
 
                             </ul>
                         </div>
@@ -50,7 +50,7 @@
                                 Навигация
                             </button>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Обо мне</a></li>
+                                <li><a class="dropdown-item" href="#aboutMe">Обо мне</a></li>
                                 <li><a class="dropdown-item" href="#">Услуги</a></li>
                                 <li><a class="dropdown-item" href="#">Кейсы</a></li>
                                 <li><a class="dropdown-item" href="#">Прайс</a></li>
@@ -64,7 +64,7 @@
         </nav>
     </header> 
 <main>
-    <section class="main">
+    <section class="main" class="section">
         <div class="container h-100">
             <div class="row align-items-center h-100">
                 <div class="col-lg-6">
@@ -79,7 +79,7 @@
         </div>
 
     </section>
-    <section class="about_me">
+    <section class="about_me" class="section" id="aboutMe">
 
         <div class="about_me_container container">
             <div class="row justify-content-center">
@@ -103,7 +103,7 @@
         </div>
     </section>
     
-   <section class="skills">
+   <section class="skills" class="section" id="skillS">
        <div class="skills_container container">
            <div class="skill_container">
                <h2>Чем я смогу вас удивить?</h2>
@@ -138,7 +138,7 @@
        </div>
    </section>
     
-     <section class="My_cases container">
+     <section class="My_cases container" class="section" id="myCases">
          <div class="row justify-content-center">
              <div class="col-12 col-sm-6 col-md-3 text-center">
                  <h2>Мои кейсы</h2>
@@ -205,17 +205,18 @@
          </div>
      </section>
     
-    <section class="Cost_calculating container">
-        <h3 class="animate__animated animate__rollIn mt-5">Расчёт стоимости</h3>
+    <section class="Cost_calculating container" class="section" id="costCalculate">
+        <h3 class="animate__animated animate__rollIn mt-5 mb-0">Расчёт стоимости</h3>
 
         <ul>
             <div class="row justify-content-center">
                 <div class="col-10">
                     <li class="select_item">Тип сайта</li>
                     <select class="col-12" name="list" id="list1">
-                        <option value="Opt1">Сайт-визитка</option>
-                        <option value="Opt2">Корпоративный сайт</option>
-                        <option value="Opt3">Веб-сервис</option>
+                       <option value="0" days="0" selected disabled>Выберите пункт</option>
+                        <option value="100" days="1">Сайт-визитка</option>
+                        <option value="500" days="5">Корпоративный сайт</option>
+                        <option value="1000" days="10">Веб-сервис</option>
                     </select>
                 </div>
             </div>
@@ -223,9 +224,10 @@
                 <div class="col-10">
                     <li class="select_item">Дизайн</li>
                     <select class="col-12" name="list" id="list2">
-                        <option value="Opt1">Простой</option>
-                        <option value="Opt2">Красочный</option>
-                        <option value="Opt3">Специфический</option>
+                       <option value="0" days="0" selected disabled>Выберите пункт</option>
+                        <option value="500" days="2">Простой</option>
+                        <option value="1000" days="6">Красочный</option>
+                        <option value="2000" days="11">Специфический</option>
                     </select>
 
                 </div>
@@ -234,27 +236,28 @@
                 <div class="col-10">
                     <li class="select_item">Адаптивность</li>
                     <select class="col-12" name="list" id="list3">
-                        <option value="Opt1">ПК</option>
-                        <option value="Opt2">Мобильные уст-ва + ПК</option>
-                        <option value="Opt3">Мобильные уст-ва</option>
+                       <option value="0" days="0" selected disabled>Выберите пункт</option>
+                        <option value="1000" days="3">ПК</option>
+                        <option value="2000" days="2">Мобильные уст-ва + ПК</option>
+                        <option value="5000" days="12">Мобильные уст-ва</option>
                     </select>
                 </div>
             </div>
 
         </ul>
-        <div class="time row justify-content-between col-12">
+        <div class="time row justify-content-between col-12" id="count">
             <p class="cost col-2 offset-1 ">Сроки</p>
-            <p class="number col-1 offset-1">0</p>
+            <p class="number col-1">0</p>
 
 
         </div>
-        <div class="time row justify-content-between col-12">
+        <div class="time row justify-content-between col-12" id="price">
             <p class="cost col-5 offset-1">Стоимость</p>
-            <p class="number col-1 offset-3">0</p>
+            <p class="number col-1">0</p>
         </div>
 
     </section>
- <section class=statistic>
+ <section class="statistic" class="section">
      <div class="Statistic container">
          <div class="stat">
              <h4>Немного пока пустой статистики</h4>
@@ -282,8 +285,8 @@
      </div>
  </section>
     
-    <section class="reviews container">
-        <h3>Отзывы</h3>
+    <section class="reviews container" class="section"  id="reviews">
+        <h3  class="element-animation">Отзывы</h3>
         <div class="row justify-content-center">
             <div class="col-8 text-center mb-4">
                 <img src="..." alt="">
@@ -293,7 +296,7 @@
         </div>
 
     </section>
-          <section class="contacts">
+          <section class="contacts" class="section" id="contactsItems">
               <div class="container">
                   <h3>Мои контакты</h3>
 
@@ -343,6 +346,7 @@
     </footer>
   
 </main>
+  <script src="js/jquery-3.6.1.min.js"></script>
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/bootstrap.bundle.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
