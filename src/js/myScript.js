@@ -9,49 +9,7 @@ $(document).ready(function () {
         observer.observe(el);
     });
 
-    /*let type, design, adaptivity;
-
-    let calculator = {
-        price: [
-            [100, 500, 1000],
-            [500, 1000, 2000],
-            [1000, 2000, 5000],
-        ],
-        days: [
-            [1, 5, 10],
-            [2, 6, 11],
-            [3, 8, 12],   
-        ],
-        run(typeSite, designSite, adaptivitySite) {
-            let sum = parseInt(calculator.price[0][typeSite - 1]) + parseInt(calculator.price[1][designSite - 1]) + parseInt(calculator.price[2][adaptivitySite - 1]);
-            let days = parseInt(calculator.days[0][typeSite - 1]) + parseInt(calculator.days[1][designSite - 1]) + parseInt(calculator.days[2][adaptivitySite - 1]);
-            alert("Сроки: "+ days + "\nСтоимость: " + sum);
-        
-      }
-    }
-    function getAnswers(){
-    type = prompt("Тип сайта: \n1 - Сайт-визитка \n2 - Корпоративный сайт, \n3 - Веб-сервис");
-        if(type != 1 && type != 2 && type != 3) {
-            alert("Такого варианта нет");
-            getAnswers();
-            return;
-        }
-    design = prompt("Дизайн: \n1 - Простой \n2 - Красочный \n3 - Специфический");
-        if(design != 1 && design != 2 && design != 3) {
-            alert("Такого варианта нет");
-            getAnswers();
-            return;
-        }
-    adaptivity = prompt("Адаптивность: \n1 - ПК \n2 - Мобильные уст-ва + ПК \n3 - Мобильные уст-ва");
-        if(adaptivity != 1 && adaptivity != 2 && adaptivity != 3) {
-            alert("Такого варианта нет");
-            getAnswers();
-            return;
-        }
-        calculator.run(type, design, adaptivity);
-    }
-    getAnswers();
-    */
+   
     $('a[href^="#"]').click(function () {
         let valHref = $(this).attr("href")
         $('html, body').animate({
@@ -70,33 +28,70 @@ $(document).ready(function () {
         })
     }
 
-$(".preloader").css("display", "none")
-    
-$("select").on("change", function(){
-    let sum = parseInt($("#list1 option:selected").val()) + parseInt($("#list2 option:selected").val()) + parseInt($("#list3 option:selected").val())
-    let days = parseInt($("#list1 option:selected").attr("days")) + parseInt($("#list2 option:selected").attr("days")) + parseInt($("#list3 option:selected").attr("days"))
-    $("#count .number").text(sum)
-    $("#price .number").text(days)
+    $(".preloader").css("display", "none")
+
+    $("select").on("change", function () {
+        let sum = parseInt($("#list1 option:selected").val()) + parseInt($("#list2 option:selected").val()) + parseInt($("#list3 option:selected").val())
+        let days = parseInt($("#list1 option:selected").attr("days")) + parseInt($("#list2 option:selected").attr("days")) + parseInt($("#list3 option:selected").attr("days"))
+        $("#count .number").text(sum)
+        $("#price .number").text(days)
+    })
+
+    $(window).scroll(() => {
+        let scrollDistance = $(window).scrollTop();
+
+        $('.section').each((i, el) => {
+
+            if ($(el).offset().top - $('nav').outerHeight() <= scrollDistance) {
+                $('nav a').each((i, el) => {
+                    if ($(el).hasClass('active')) {
+                        $(el).removeClass('active');
+                    }
+                });
+
+                $('nav li:eq(' + i + ')').find('a').addClass('active');
+            }
+
+        });
+    });
+
+
+
+    //const openPopUp = document.getElementById('open_pop_up');
+    const closePopUp = document.getElementById('pop_up_close');
+    const popUp = document.getElementById('pop_up');
+
+    function sayHi(e) {
+        popUp.classList.add('open');
+    }
+
+    closePopUp.addEventListener('click', () => {
+        popUp.classList.remove('open');
+    })
+    setTimeout(sayHi, 5000);
+
+   let show = true;
+    $(window).on("scroll", function(){
+        
+        if(!show) return false;
+        
+        let w_top = $(window).scrollTop();
+        let e_top = $("#increase_all").offset().top;
+        if(w_top + 350 >= e_top){
+           $('.increasing_item').each(function() {
+    $(this).prop('Counter',-1).animate({
+        Counter:$(this).text()},
+        {duration: 3500,
+         easing: 'swing',
+         step:function(val){
+             $(this).text(Math.ceil(val));
+         }
+        });
+    }); 
+            show = false;
+        }
+    })
 })
 
-         $(window).scroll(() => {
-               let scrollDistance = $(window).scrollTop();
-
-               $('section').each((i, el) => {
-
-                   if ($(el).offset().top - $('nav').outerHeight() <= scrollDistance) {
-                       $('nav a').each((i, el) => {
-                           if ($(el).hasClass('active')) {
-                               $(el).removeClass('active');
-                           }
-                       });
-
-                       $('nav li:eq(' + i + ')').find('a').addClass('active');
-                   }
-
-               });
-           });
-    
-})
 
  

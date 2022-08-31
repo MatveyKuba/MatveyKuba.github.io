@@ -507,7 +507,10 @@ text-decoration: none;
     padding-bottom: 50px;
 }
 .Statistic p{
-    font-size:22px; 
+    font-size:30px; 
+}
+.Statistic li{
+    font-size: 17px;
 }
 #skiills {
     margin-top:60px;
@@ -527,6 +530,44 @@ text-decoration: none;
 }
 .reviews .name {
     margin-top: 10px;
+}
+.fotorama {
+    height: auto;
+    margin: 0 auto;
+    width: auto;
+}
+.carousel-control-next {
+    color: red;
+    background: none;
+}
+.carousel-indicators button{
+    width: 30px;
+    height: 5px;
+    background: red;
+    margin: 3px;
+    border-radius: 5px;
+}
+.carousel-indicators button.active{
+    background: red;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+.carousel-control-next:hover {
+    opacity: 1;
+    color: red;
+}
+.carousel-control-next:focus{
+    color: red;
+}
+.carousel-control-prev {
+    color: red;
+    background: none;
+}
+.carousel-control-prev:hover{
+    color: red;
+}
+.carousel-control-prev:focus{
+    color: red;
 }
 .contacts h3 {
     font-size: 23px;
@@ -713,6 +754,78 @@ text-decoration: none;
 }*/
 .your_message {
     text-align: center;
+}
+.pop_up{
+    
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: transparent;
+    z-index: 3000;
+    transform: translateY(-24.5%) scale(0);
+    transition: .4s ease-in-out
+}
+.pop_up.open {
+    transform: translateY(0%) scale(100%);
+    background-color: rgba(0, 0, 0, .8);
+}
+.pop_up_container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+.pop_up_body{
+    margin: auto;
+    width: 500px;
+    background-color: #fff;
+    border-radius: 10px;
+    text-align: center;
+    padding: 100px 15px 110px 15px;
+    position: relative;
+}
+.pop_up_body{
+    font-size: 28px;
+    font-weight: 600;
+    color: #22262D;
+    
+}
+.pop_up_body input {
+    display: block;
+    margin: 25px auto 0px auto;
+    width: 330px;
+    padding: 17px 20px;
+    background-color: #E5E5E5;
+    border-radius: 10px;
+    border: none;
+    font-weight: 500;
+    font-size: 18px;
+    color: #89909F;
+}
+.pop_up_body input:focus{
+    outline: none;
+}
+.pop_up_body button{
+    cursor: pointer;
+    display: block;
+    width: 330px;
+    margin: 60px auto 0px auto;
+    padding: 20px 0px;
+    font-weight: 500;
+    font-size: 25px;
+    text-transform: uppercase;
+    border: none;
+    color: #fff;
+    border-radius: 10px;
+    background-color: red;
+}
+.pop_up_close{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 21px;
+    cursor: pointer;
 }
 /*
 

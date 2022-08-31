@@ -64,6 +64,20 @@
         </nav>
     </header> 
 <main>
+  
+   <div class="pop_up" id="pop_up">
+       <div class="pop_up_container">
+           <div class="pop_up_body" id="pop_up_body">
+               <p>Оставить заявку, чтобы я смог с тобой связаться!</p>
+               <form action="">
+                   <input type="text" placeholder="Имя">
+                   <input type="text" placeholder="Телефон">
+                   <button>Оставить заявку</button>
+               </form>
+               <div class="pop_up_close" id="pop_up_close">&#10006</div>
+           </div>
+       </div>
+   </div>
     <section class="main" class="section">
         <div class="container h-100">
             <div class="row align-items-center h-100">
@@ -140,7 +154,7 @@
     
      <section class="My_cases container section"  id="myCases">
          <div class="row justify-content-center">
-             <div class="col-12 col-sm-6 col-md-3 text-center">
+             <div class="col-12 col-sm-6 col-md-3 text-center mt-4">
                  <h2>Мои кейсы</h2>
              </div>
          </div>
@@ -389,7 +403,7 @@
         </div>
 
     </section>
- <section class="statistic">
+ <section class="statistic" id="increase_all">
      <div class="Statistic container">
          <div class="stat">
              <h4>Немного пока пустой статистики</h4>
@@ -398,16 +412,16 @@
                      <div class="statistic_item col-12 col-md-4 mb-5">
 
                          <li>Часы работы</li>
-                         <p><big><b>5</b></big></p>
+                         <p class="increasing_item"><big><b>100</b></big></p>
                      </div>
                      <div class="statistic_item col-12 col-md-4 mb-5">
                          <li>Проекты</li>
-                         <p><big><b>1</b></big></p>
+                         <p class="increasing_item"><big><b>5</b></big></p>
 
                      </div>
                      <div class="statistic_item col-12 col-md-4 mb-5">
                          <li>Клиенты</li>
-                         <p><big><b>пока 0</b></big></p>
+                         <p class="increasing_item"><big><b>10</b></big></p>
 
                      </div>
                  </div>
@@ -419,13 +433,54 @@
     
     <section class="reviews container section" id="reviews">
         <h3  class="element-animation">Отзывы</h3>
-        <div class="row justify-content-center">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+       <div class="row justify-content-center">
+           
             <div class="col-8 text-center mb-4">
                 <img src="..." alt="">
                 <p>Он очень находчивый парень, но неуверенный в себе. Верю, что он сможет найти себя в этом деле</p>
                 <p class="name"><b>Татьяна</b>, мама Матвея</p>
             </div>
         </div>
+    </div>
+    <div class="carousel-item">
+       <div class="row justify-content-center">
+           
+            <div class="col-8 text-center mb-4">
+                <img src="..." alt="">
+                <p>Он очень находчивый парень, но неуверенный в себе. Верю, что он сможет найти себя в этом деле</p>
+                <p class="name"><b>Татьяна</b>, мама Матвея</p>
+            </div>
+        </div>
+    </div>
+    <div class="carousel-item">
+      <div class="row justify-content-center">
+           
+            <div class="col-8 text-center mb-4">
+                <img src="..." alt="">
+                <p>Он очень находчивый парень, но неуверенный в себе. Верю, что он сможет найти себя в этом деле</p>
+                <p class="name"><b>Татьяна</b>, мама Матвея</p>
+            </div>
+        </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Предыдущий</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Следующий</span>
+  </button>
+</div>
+       
 
     </section>
           <section class="contacts section" id="contactsItems">
@@ -484,5 +539,6 @@
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
 <script src="js/myScript.js"></script>
+
 </body>
 </html>
