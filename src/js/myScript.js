@@ -55,8 +55,6 @@ $(document).ready(function () {
         });
     });
 
-
-
     //const openPopUp = document.getElementById('open_pop_up');
     const closePopUp = document.getElementById('pop_up_close');
     const popUp = document.getElementById('pop_up');
@@ -91,6 +89,22 @@ $(document).ready(function () {
             show = false;
         }
     })
+    
+let optionI = {threshold: [0.1]};
+    let observerI = new IntersectionObserver(onEntryI, optionI);
+    let elementsI = $('.badQ');
+    elements.each((i,el) => {
+        observerI.observe(el);
+    });
+    
+    
+function onEntryI (entryI){
+    entryI.forEach(change => {
+        if (change.isIntersecting) {
+            change.target.src = change.target.dataset.src;
+        }
+    })
+}    
 })
 
 

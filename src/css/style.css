@@ -540,14 +540,14 @@ text-decoration: none;
     color: red;
     background: none;
 }
-.carousel-indicators button{
+.reviews .carousel-indicators button{
     width: 30px;
     height: 5px;
     background: red;
     margin: 3px;
     border-radius: 5px;
 }
-.carousel-indicators button.active{
+.reviews .carousel-indicators button.active{
     background: red;
     border: 2px solid black;
     border-radius: 5px;
