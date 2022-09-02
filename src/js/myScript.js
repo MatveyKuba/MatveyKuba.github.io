@@ -8,6 +8,14 @@ $(document).ready(function () {
     elements.each((i, el) => {
         observer.observe(el);
     });
+    function onEntry(entry) {
+        entry.forEach(change => {
+            if (change.isIntersecting) {
+                change.target.classList.add('show-animation');
+            }
+        })
+    }
+
 
    
     $('a[href^="#"]').click(function () {
@@ -20,14 +28,7 @@ $(document).ready(function () {
 
 
 
-    function onEntry(entry) {
-        entry.forEach(change => {
-            if (change.isIntersecting) {
-                change.target.classList.add('show-animation');
-            }
-        })
-    }
-
+    
     $(".preloader").css("display", "none")
 
     $("select").on("change", function () {
@@ -66,7 +67,7 @@ $(document).ready(function () {
     closePopUp.addEventListener('click', () => {
         popUp.classList.remove('open');
     })
-    setTimeout(sayHi, 5000);
+    setTimeout(sayHi, 10000);
 
    let show = true;
     $(window).on("scroll", function(){
@@ -75,7 +76,7 @@ $(document).ready(function () {
         
         let w_top = $(window).scrollTop();
         let e_top = $("#increase_all").offset().top;
-        if(w_top + 350 >= e_top){
+        if(w_top + 450 >= e_top){
            $('.increasing_item').each(function() {
     $(this).prop('Counter',-1).animate({
         Counter:$(this).text()},
@@ -93,7 +94,7 @@ $(document).ready(function () {
 let optionI = {threshold: [0.1]};
     let observerI = new IntersectionObserver(onEntryI, optionI);
     let elementsI = $('.badQ');
-    elements.each((i,el) => {
+    elementsI.each((i,el) => {
         observerI.observe(el);
     });
     
@@ -105,6 +106,11 @@ function onEntryI (entryI){
         }
     })
 }    
+    
+$(document).ready(function() {
+  $('.image-link').magnificPopup({type:'image'});
+});
+
 })
 
 
