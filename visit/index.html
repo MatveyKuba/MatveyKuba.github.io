@@ -123,7 +123,7 @@
            <div class="skill_container">
                <h2>Чем я смогу вас удивить?</h2>
                <img src="..." alt="">
-               <div class="row justify-content-center text-center mt-5">
+               <div class="row justify-content-center text-center mt-5 d-none d-lg-block ">
                    <div class="skills_item col-12 col-sm-6 col-md-3 mt-lg-6">
                        <img src="img/%D0%BD%D0%BE%D1%83%D1%82.png" alt="тут фото">
                        <h3>Веб-разработка сайтов (совсем чуть-чуть)</h3>
@@ -145,9 +145,59 @@
                    <div class="skills_item col-12 col-sm-6 col-md-3 mt-5 mt-md-0">
                        <img src="img/%D0%BD%D0%BE%D1%83%D1%82.png" alt="тут фото">
                        <h3>Психолог онлайн</h3>
-                       <p>Лучшей поддержки вы не наёдете</p>
+                       <p>Лучшей поддержки вы не найдете</p>
                    </div>
                </div>
+               <div class="row justify-content-center">
+               <div id="carouselExampleControls" class="carousel slide d-lg-none" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+     <div class="row justify-content-center">
+      <div class="skills_Item text-center col-8 mb-1">
+                       <img src="img/%D0%BD%D0%BE%D1%83%D1%82.png" alt="тут фото">
+                       <h3>Веб-разработка сайтов (совсем чуть-чуть)</h3>
+                       <p>Всегда хотел освоить эту нишу, именно поэтому пошёл на этот курс</p>
+                   </div>
+    </div>
+    </div>
+    <div class="carousel-item">
+    <div class="row justify-content-center">
+     <div class="skills_Item text-center col-8 mb-1">
+                      <img src="img/%D0%BD%D0%BE%D1%83%D1%82.png" alt="тут фото">
+                       <h3>Настойчивость - моё второе Я</h3>
+                       <p>Могу заставить вас делать то, что вы не хотите</p>
+                   </div>
+    </div>
+    </div>
+    <div class="carousel-item">
+     <div class="row justify-content-center">
+      <div class="skills_Item  text-center col-8 mb-1">
+                       <img src="img/%D0%BD%D0%BE%D1%83%D1%82.png" alt="тут фото">
+                       <h3>Экономический прогноз</h3>
+                       <p>Не зря ведь я учусь на экономиста...</p>
+                   </div>
+    </div>
+    </div>
+    <div class="carousel-item ">
+     <div class="row justify-content-center">
+      <div class="skills_item  text-center col-8 mb-1">
+                       <img src="img/%D0%BD%D0%BE%D1%83%D1%82.png" alt="тут фото">
+                       <h3>Психолог онлайн</h3>
+                       <p>Лучшей поддержки вы не наёдете</p>
+                   </div>
+    </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"  data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"  data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Следующий</span>
+  </button>
+</div>
+          </div>
            </div>
 
        </div>
@@ -392,13 +442,13 @@
         </ul>
         <div class="row justify-content-center">
         <div class="time col-10" id="count">
-            <p class="cost">Сроки</p>
+            <p class="cost">Стоимость (руб.)</p>
             <p class="number">0</p>
 
 
         </div>
         <div class="time col-10" id="price">
-            <p class="cost">Стоимость</p>
+            <p class="cost">Сроки (дни)</p>
             <p class="number">0</p>
         </div>
         </div>
@@ -496,11 +546,11 @@
                       </div>
                       <div class="contacts_item col-8 col-lg-2">
                           <img class="mb-sm-1 mt-sm-5" src="img/%D0%BA%D0%BE%D0%BD%D0%B2%D0%B5%D1%80%D1%82.png" alt="Моя почта">
-                          <p>kubm2016@gmail.com</p>
+                          <a class="call_me" href="mailto: kubm2016@gmail.com"><p>kubm2016@gmail.com</p></a>
                       </div>
                       <div class="contacts_item col-8 col-lg-2">
                           <img class="mb-sm-1 mt-sm-5" src="img/%D1%82%D1%80%D1%83%D0%B1%D0%B0.png" alt="Мой номер">
-                          <p>77777777777</p>
+                          <a  class="call_me d-block" href="tel:+77777777777"><p class="call_me">77777777777</p></a>
                       </div>
                   </div>
               </div>

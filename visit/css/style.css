@@ -141,7 +141,7 @@ text-decoration: none;
 .main {
     width: 100%;
     height:100%;
-    background: url(../img/%D0%A4%D0%BE%D0%BD.png) 90% 100%/auto 85% no-repeat ,url(../img/bg.jpg);
+    background: url(../img/%D0%A4%D0%BE%D0%BD.png) 90% 100%/auto 85% no-repeat ,url(../img/keyboard.jpg)80% 100%/100% 100% no-repeat;
 
 }
 @keyframes coming{
@@ -200,7 +200,7 @@ text-decoration: none;
     animation-delay: 2.4s;
     margin-top: 200px;
 }
-@media (max-width:991px){
+@media (max-width:1005px){
     .title__container {
         color: black;
         position: relative;
@@ -208,6 +208,7 @@ text-decoration: none;
     }
     .main {
         position: relative;
+       
     }
     .main::after{
         content: "";
@@ -216,7 +217,7 @@ text-decoration: none;
         right: 0;
         left: 0;
         position: absolute;
-        background: rgba(0,0,0,0.4);
+        background: url(../img/bgphone.jpg) 10% 100%/100% 100% no-repeat;
         z-index: 1;
     }
 }
@@ -343,8 +344,9 @@ text-decoration: none;
     color: #f10;
 }
 .skill_container .skills_item{
-    margin-bottom: 30px;
+    margin-bottom: 80px;
     font-size: 16px;
+    float: left;
     transform: scale(1); 
 
     transition: all 0.5s;
@@ -390,6 +392,7 @@ text-decoration: none;
     }
 }*/
    
+
 }
 .element-animation {
     opacity: 0;
@@ -639,6 +642,11 @@ text-decoration: none;
     font-size: 16px;
     
 }
+.contacts_item .call_me {
+    text-decoration: none;
+    color: white;
+    
+}
 .contacts textarea {
     margin-top: 20px;
     background: #d2d6dc;
@@ -650,6 +658,29 @@ text-decoration: none;
 .contacts textarea:focus{
     transform: scale(1.15);
 }
+
+.carousel-control-prev{
+    width: 5%;
+    height: 70%;
+}
+.carousel-control-next{
+    width: 5%;
+    height: 70%;
+}
+.carousel-control-prev-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    background: #676767 url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+}
+.carousel-control-next-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    background: #676767 url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+}
+
+
 
 /*@keyframes scale {
     from{

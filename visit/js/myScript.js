@@ -119,7 +119,7 @@ $('form').submit(function(event){
     
     $.ajax({
         type: "POST",
-        url: "php/mail.php",
+        url: "php/mail.php" || "php/mail1.php",
         data: $(this).serialize()
     }).done(function (){
         $(this).find("input").val("");
@@ -128,6 +128,7 @@ $('form').submit(function(event){
     });
     return false;
 })
+    
     
 })
 
