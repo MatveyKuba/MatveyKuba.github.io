@@ -114,22 +114,52 @@ new WOW().init();
 $("#phone_number").mask("+7(999) 999-9999");
   
     
-$('form').submit(function(event){
+$('#formmer').submit(function(event){
     event.preventDefault();
     
     $.ajax({
         type: "POST",
-        url: "php/mail.php" || "php/mail1.php",
+        url: "php/mail.php",
         data: $(this).serialize()
     }).done(function (){
         $(this).find("input").val("");
         alert("Успешно отправлено");
-        $("form").trigger("reset");
+        $("#formmer").trigger("reset");
     });
     return false;
 })
+$('#pop_ups').submit(function(event){
+    event.preventDefault();
     
+    $.ajax({
+        type: "POST",
+        url: "php/mail1.php",
+        data: $(this).serialize()
+    }).done(function (){
+        $(this).find("input").val("");
+        alert("Успешно отправлено");
+        $("#pop_ups").trigger("reset");
+    });
+    return false;
+})    
     
+YaMapsShown = false;  
+$(window).scroll(function() {
+    if (!YaMapsShown){
+     if($(window).scrollTop() + $(window).height() > $(document).height() - 600) {      
+      showYaMaps();
+      YaMapsShown = true;
+     }
+    }
+ });
+    
+function showYaMaps(){
+ let script   = document.createElement("script");
+ script.type  = "text/javascript";
+ script.src   = "https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ac35c4d74f72acee9fc2534c1b426c9eaec775cacb62c72a4f96ffb7b16ab7b2b&amp;width=100%25&amp;height=350&amp;lang=ru_RU&amp;scroll=false";
+ document.getElementById("YaMaps").appendChild(script);
+}
+
 })
 
 
