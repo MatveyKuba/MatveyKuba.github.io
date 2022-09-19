@@ -172,7 +172,7 @@ text-decoration: none;
         z-index: 3;
         position: relative;
     }
-    .title__container h1 {
+    .title__container h1, .title__container h4 {
         color: white;
     }
     
