@@ -69,6 +69,9 @@
 //     alert(calcSqrt(x,n))
 // }
 
+// for (let i=1; i <= 19; i++) {
+//     console.log(i);
+// }
 
 let x = +prompt('x?', '');
 let n = +prompt('n?','');
@@ -110,6 +113,3 @@ else{
     alert('Это не число'); 
 }
 
-// for (let i=1; i <= 19; i++) {
-//     console.log(i);
-// }
