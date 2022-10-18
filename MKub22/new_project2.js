@@ -82,20 +82,25 @@ function multi(x,n){
 function substract(x,n){
     return x - n;
 }
+function calc(x, n, func){
+    const result = func(x,n);
+    return result;
+}    
+const operations = {
+    add:"+",
+    multi:"*",
+    substract:"-",
+}    
 if (!isNaN(x) && !isNaN(n)) {
 switch (prompt('+,- или *')){
         case "+":
-            function calc(x, n, func){
-            const result = func(x,n);
-            return result;
-            }        
-            alert(calc(+x,+n, add));
+            alert(calc(+x,+n, operations));
         break;
         case "-":
-             alert(calc(+x,+n, substract));
+             alert(calc(+x,+n, operations));
         break;
         case "*":
-             alert(calc(+x,+n, multi));
+             alert(calc(+x,+n, operations));
             break;
             default:
                 alert("А что вам надо?");
@@ -105,4 +110,6 @@ else{
     alert('Это не число'); 
 }
 
-    
+// for (let i=1; i <= 19; i++) {
+//     console.log(i);
+// }
