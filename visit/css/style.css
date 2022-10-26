@@ -155,62 +155,7 @@ text-decoration: none;
     height:100%;
     background: url(../img/%D1%84%D0%BE%D1%82%D0%BE3.png) 90% 300%/auto 95% no-repeat ,url(../img/red.jpg)80% 100%/100% 100% no-repeat;
 }
-@media (max-width: 1500px) and (min-width:1005px) {
-    .title__container3, .title__container3 h1 {
-        color: white;
-        z-index: 3;
-        position: relative;
-    }
-    .title__container4, .title__container4 h1 {
-        color: white;
-        z-index: 3;
-        position: relative;
-    }
-   
-     .title__container {
-        color: white;
-        z-index: 3;
-        position: relative;
-    }
-    .title__container h1, .title__container h4 {
-        color: white;
-    }
-    
-    .main{
-        position: relative;
-    }
-    .main:after{
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        background: rgba(0,0,0,.6);
-        z-index: 1;
-        
-    }
-    .main3:after{
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        background: rgba(0,0,0,.5);
-        z-index: 2;
-    }
-    .main4:after {
-     content: "";
-     position: absolute;
-     top: 0;
-     left: 0;
-     bottom: 0;
-     right: 0;
-     background: rgba(0, 0, 0, .5);
-     z-index: 2;
- }
-}
+
  
 @keyframes coming{
     from {
@@ -330,13 +275,13 @@ text-decoration: none;
 }
 .title__container4 input{
     height: 40px;
-    border: 2px solid #f10;
-    background: none;
+    border: 2px solid #000;
+    background: #f10;
     border-radius: 5px;
-    color: #fff;
+    color: black;
     font-size: 17px;
     padding: 0px 16px;
-    margin: 28px 14px 0px 14px;
+    margin: 15px 14px 0px 14px;
     cursor: pointer;
 }
 .title__container4 input{
@@ -345,18 +290,112 @@ text-decoration: none;
     
 }
 .title__container4 input:hover {
-    background: #f10;
+    background: #fff;
     color: #000;
     border-color: #000;
 }
 .title__container4 input:active{
     transform: scale(1.2)
 }
+.title__container h4{
+    margin-top: 40px;
+    font-size: 22px;
+    color: #000
+}
+.title__container input{
+    height: 40px;
+    border: 2px solid #000;
+    background: none;
+    border-radius: 5px;
+    color: #000;
+    font-size: 13px;
+    padding: 0px 16px;
+    margin: 58px 14px 0px 14px;
+    cursor: pointer;
+}
+.title__container input{
+    transition: all 0.2s;
+    transform: scale(1);
+    
+}
+.title__container input:hover {
+    background: #f10;
+    color: white;
+}
+.title__container input:active{
+    transform: scale(1.2)
+}
+@media (max-width: 1500px) and (min-width:1005px) {
+    .title__container3, .title__container3 h1 {
+        color: white;
+        z-index: 3;
+        position: relative;
+    }
+    .title__container4, .title__container4 h1 {
+        color: white;
+        z-index: 3;
+        position: relative;
+    }
+   
+     .title__container {
+        color: white;
+        z-index: 3;
+        position: relative;
+    }
+    .title__container h1, .title__container h4, .title__container input{
+        color: white;
+    }
+    .title__container input{
+        border: 2px solid #f10;
+        color: black;
+    }
+    
+    .main{
+        position: relative;
+    }
+    .main:after{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background: rgba(0,0,0,.6);
+        z-index: 1;
+        
+    }
+    .main3:after{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background: rgba(0,0,0,.5);
+        z-index: 2;
+    }
+    .main4:after {
+     content: "";
+     position: absolute;
+     top: 0;
+     left: 0;
+     bottom: 0;
+     right: 0;
+     background: rgba(0, 0, 0, .5);
+     z-index: 2;
+ }
+}
 @media (max-width:1005px){
     .title__container {
         color: black;
         position: relative;
         z-index: 900;
+    }
+    .copyright span{
+        text-align: center;
+    }
+    .copyright a{
+        display: block;
     }
     .hi {
         margin-top:-150px;
@@ -428,34 +467,8 @@ text-decoration: none;
     font-size: 55px;
     font-weight: bold;
 }
-.title__container h4{
-    margin-top: 40px;
-    font-size: 22px;
-    color: #000
-}
-.title__container input{
-    height: 40px;
-    border: 2px solid #000;
-    background: none;
-    border-radius: 5px;
-    color: #000;
-    font-size: 13px;
-    padding: 0px 16px;
-    margin: 58px 14px 0px 14px;
-    cursor: pointer;
-}
-.title__container input{
-    transition: all 0.2s;
-    transform: scale(1);
-    
-}
-.title__container input:hover {
-    background: #f10;
-    color: white;
-}
-.title__container input:active{
-    transform: scale(1.2)
-}
+
+
 
 .about_me h2{
     color: #f10;
@@ -1038,7 +1051,7 @@ text-decoration: none;
       }
 .copyright {
     width: 100%;
-    height: 60px;
+    height: px;
     background: #f10;
 }
 .copyright h {
@@ -1049,6 +1062,26 @@ text-decoration: none;
     transition: all 0.2s;
     display: block;
     text-align: center;
+}
+.copyright span {
+  margin-top: 10px;
+    font-size: 16px;
+    text-decoration: none;
+    color: white;
+ margin-right: 5px;
+  
+}
+.SMM1 a{
+    text-decoration: none;
+    margin-right: 10px;
+    cursor: pointer;
+      color: black;
+}
+.SMM2 a{
+   
+    text-decoration: none;
+    cursor: pointer;
+      color: black;
 }
 /*.copyright h:hover{
     transform: scale(1.5);
