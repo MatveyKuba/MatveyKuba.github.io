@@ -13,7 +13,7 @@ const statuses = {
 const list = [
     {name: 'create a new practice task', status: 'In progress:', priority: "High"},
     {name: 'make a bed', status: 'Done:', priority: "Low"},
-    {name: 'write a post', status: 'To Do:', priority: "High"},
+    {name: 'write a post', status: 'To Do:', priority: "Medium"},
 ]
 
 let keys = {
@@ -26,20 +26,31 @@ let keys = {
 function changeStatus(task, status){
     if (list.filter(item => item.status != " " )) {
         list[task] = status;
+     
+
 }    
+// let deal = list.filter(item => item.name == task);
+// return deal;
+// list[item => item.name == task];
+
 };
 
 function addTask(newTask){
+    newTask ={
+        name : newTask,
+        status: 'To Do:',
+        priority: 'High',
+    }
     if(!newTask) {
         console.log('Введите задачу');
     }
-    list[newTask] = 'To Do:';
+    // list[newTask.status] = 'To Do:';
+    list.splice(4, 0, newTask);
 }
 
-function deleteTask(task){
-    if(task in list) {
-        delete list[task];
-    }
+function deleteTask(name){
+        list.splice(1, list.name);
+
 
 };
 function showList(){
@@ -77,6 +88,7 @@ changeStatus('write a post', 'Done:');
 changeStatus('catch sone', 'Done:');
 changeStatus('write a post','To Do:');
 showList();
+console.log(list)
 
 
 
