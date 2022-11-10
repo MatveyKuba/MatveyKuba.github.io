@@ -4,6 +4,11 @@ const statuses = {
     DONE : 'Done:',
     INPR : 'In Progress:',
 }
+const priorities = {
+    HIGH : 'High',
+    MEDIUM : "Medium",
+    LOW : 'Low',
+}
 // const list = {
 // 	"create a new practice task": "In Progress:",
 // 	"make a bed": "Done:",
@@ -11,9 +16,9 @@ const statuses = {
 // };
 
 const list = [
-    {name: 'create a new practice task', status: 'In progress:', priority: "High"},
     {name: 'make a bed', status: 'Done:', priority: "Low"},
     {name: 'write a post', status: 'To Do:', priority: "Medium"},
+    {name: 'create a task', status: 'In progress:', priority: "High"},
 ]
 
 let keys = {
@@ -23,23 +28,25 @@ let keys = {
 
 }
 
-function changeStatus(task, status){
-    if (list.filter(item => item.status != " " )) {
-        list[task] = status;
-     
+function changeStatus(task, newStatus) {
+    if (list.find(item => item.name == task) === undefined) {
+     console.log(`can't change "${task}" to "${newStatus}" cause there's no such task`);
+    } else {
+     list.find(item => item.name == task).status = newStatus;
+    }
+ }
 
-}    
-// let deal = list.filter(item => item.name == task);
-// return deal;
-// list[item => item.name == task];
-
-};
-
-function addTask(newTask){
+function deleteTask(name){
+    let obj = list.map(x => {
+        return x.name;
+    }).indexOf(name);
+    list.splice(obj, 1);
+}
+function addTask(newTask, prior){
     newTask ={
         name : newTask,
         status: 'To Do:',
-        priority: 'High',
+        priority: prior,
     }
     if(!newTask) {
         console.log('Введите задачу');
@@ -48,45 +55,74 @@ function addTask(newTask){
     list.splice(4, 0, newTask);
 }
 
-function deleteTask(name){
-        list.splice(1, list.name);
 
 
-};
-function showList(){
-    console.log('To Do:');
-    for(let key in list) {
-        if (list[key] == statuses.TODO){
-            console.log(`\t"${keys.item1 +=key}"`);
-        } else if(keys.item1 === "") {
-            console.log(`\t${keys.item1 += "-"}`);
-        }
-    };
-    console.log('Done:');
-    for(let key in list){
-        if(list[key] == statuses.DONE){
-            console.log(`\t"${keys.item2+=key}"`);
-        } else if(keys.item2 === "") {
-            console.log(`\t${keys.item2 += "-"}`);
-        }
-    };
-    console.log('In Progress:');
-    for(let key in list) {
-        if (list[key] == statuses.INPR){
-            console.log(`\t"${keys.item3+=key}"`);
-        } else if(keys.item3 === "") {
-            console.log(`\t${keys.item3 += "-"}`);
-        }
-    };
-    // console.log(`To Do: \n\t"${keys.item1}"\nDone: \n\t"${keys.item2}"\nIn Progress:\n\t"${keys.item3}"`); //не получилось написать
+// function showList(){
+//     let str ="";
+//     console.log('To Do:');
+//     // for(let key in list) {
+//     //     if (list[key] == statuses.TODO){
+//     //         console.log(`\t"${keys.item1 +=key}"`);
+//     //     } else if(keys.item1 === "") {
+//     //         console.log(`\t${keys.item1 += "-"}`);
+//     //     }
+//     // // };
+//     list.forEach(function(item) {
+//         if(item.status === statuses.TODO) {
+//          console.log(str+='\t' + item.name + '\n')
+//         } if (!str){ console.log ('-')
+//         }
+//     else{console.log(str)}});
+//     console.log('Done:');
+//     // for(let key in list){
+//     //     if(list[key] == statuses.DONE){
+//     //         console.log(`\t"${keys.item2+=key}"`);
+//     //     } else if(keys.item2 === "") {
+//     //         console.log(`\t${keys.item2 += "-"}`);
+//     //     }
+//     // // };
+//     list.map(item => {
+//         item.status === statuses.DONE ? console.log(str+="\t" + item.name + '\n'): console.log ('Enter')})
+//     console.log('In Progress:');
+//     // for(let key in list) {
+//     //     if (list[key] == statuses.INPR){
+//     //         console.log(`\t"${keys.item3+=key}"`);
+//     //     } else if(keys.item3 === "") {
+//     //         console.log(`\t${keys.item3 += "-"}`);
+//     //     }
+//     // };
+//     list.map(item => {
+//         item.status === statuses.INPR ? console.log(str+= item.name + '\n'): console.log ('Enter')})
+//     // console.log(`To Do: \n\t"${keys.item1}"\nDone: \n\t"${keys.item2}"\nIn Progress:\n\t"${keys.item3}"`); //не получилось написать
 
-};
+// };
+function showCategory(cat) {
+    let str="";
+    console.log(`${cat}`);
+    list.forEach(function(item) {
+        if (item.status === cat){
+            str+="\t" + item.name +"\n";
+        }
+    }) 
+    if (!str) {
+        console.log("\t-");
+    } else {console.log(str)}
+}
+function showList() {
+    showCategory(statuses.TODO)
+    showCategory(statuses.INPR)
+    showCategory(statuses.DONE)
+}
+
 
 deleteTask('make a bed');
-addTask('catch sone');
+addTask('catch sone', priorities.MEDIUM);
 changeStatus('write a post', 'Done:');
 changeStatus('catch sone', 'Done:');
-changeStatus('write a post','To Do:');
+addTask('make a shower', priorities.HIGH);
+addTask('create smth', priorities.LOW);
+changeStatus('create smth', 'In Progress:');
+deleteTask('create smth');
 showList();
 console.log(list)
 

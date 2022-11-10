@@ -1,47 +1,33 @@
 "use strict"
-document.getElementById('plus');
-document.getElementById('multi');
-document.getElementById('substract');
+// function buildFun(n){
+// 	let res = []
+// 	for (let i = 0; i < n; i++){
+// 		let fun = function(){
+// 			return i;
+// 		};
+//     res.push(fun);
+// 	}
+// 	return res;
+// }
+// console.log(buildFun(6));
 
-let x;
-let n;
+function buildFun(n){
 
-// let x = +prompt('x?', '');
-// let n = +prompt('n?','');
- 
-function add(x,n){
-    return x + n;
+	var res = []
+
+	for (var i = 0; i< n; i++){
+		// let j = i;
+		(function(index){
+      res.push(function(){
+			return index;
+		})
+	})(i)
+	}
+	return res
 }
-function multi(x,n){
-    return x * n;
+
+function getAverage(marks){
+  let res = marks.reduce((sum, current) => sum + current, 0);
+  return Math.floor(res / marks.length);
 }
-function substract(x,n){
-    return x - n;
-}
-function calc(x, n, func){
-    const result = func(x,n);
-    return result;
-}    
-const operations = {
-    add:"+",
-    multi:"*",
-    substract:"-",
-}    
-if (!isNaN(x) && !isNaN(n)) {
-switch (prompt('+,- или *')){
-        case "+":
-            alert(calc(+x,+n, operations));
-        break;
-        case "-":
-             alert(calc(+x,+n, operations));
-        break;
-        case "*":
-             alert(calc(+x,+n, operations));
-            break;
-            default:
-                alert("А что вам надо?");
-}
-}
-else{
-    alert('Это не число'); 
-}
+console.log(getAverage([2,2,3,4,5]));
