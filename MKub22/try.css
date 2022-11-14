@@ -1,0 +1,29 @@
+.alltasks {
+    border: 2px solid #666;
+    width: 400px;
+}
+.rtg {
+    display: none;
+}
+  
+.check {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 12px;
+    width: 10px;
+    height: 10px;
+    border: 2px solid #999;
+    border-radius: 12px;
+}
+  
+  .check:before {
+    display: none;
+    position: absolute;
+    background-color: #666;
+  }
+  
+  .rtg:checked ~ .check {
+    background-color: #999;
+  }
+  

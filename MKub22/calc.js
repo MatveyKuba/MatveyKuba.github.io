@@ -1,6 +1,4 @@
 'use strict'
-// let x = +prompt('x?', '');
-// let n = +prompt('n?','');
 const operations = {
     add:"+",
     multi:"*",
@@ -10,34 +8,13 @@ const operations = {
 
 let x = document.getElementById('number1');
 let n = document.getElementById('number2');
-let res = document.getElementById('result');
-let oper = document.querySelector('select');
-let getNum = document.getElementById('getRes');
+const res = document.getElementById('result');
+const oper = document.querySelector('select');
+// let getNum = document.getElementById('getRes');
 
+import {sum,substract,multi,division, getNum} from './module.js' 
 
-function sum(x,n){
-    // return x * n;
-    getNum.innerHTML = +x.value + +n.value;
-}
-
-function multi(x,n){
-    // return x * n;
-    getNum.innerHTML = +x.value * +n.value;
-}
-function substract(x,n){
-    // return x - n;
-    getNum.innerHTML = +x.value - +n.value;
-}
-function division(x,n){
-    // return x - n;
-    getNum.innerHTML = +x.value / +n.value;
-}
-// function calc(x, n, func){
-//     const result = func(x,n);
-//     return result;
-// }    
- 
-res.addEventListener('click', function(){
+function calc(){
     if ((x.value !== " " && n.value !== " ") || (x.value == String || n.value == String)) {
         switch (oper.value){
                 case operations.add:
@@ -55,12 +32,21 @@ res.addEventListener('click', function(){
                 default:
                     alert("А что вам надо?");
         }
+        let div = document.createElement('div');
+        div.className = 'div';
+        div.textContent = getNum.textContent;
+        document.body.append(div);
+        div.addEventListener('click', function(){
+            this.remove();
+        })
         }
         else{
             alert('Это не число'); 
         }
         
-})
+}
+res.addEventListener('click', calc);
+
 
 
 

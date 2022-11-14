@@ -15,9 +15,15 @@ p{
     color: white;
 }
 input{
-    width: 50px;
+    width: 75px;
     color: white;
     border-radius: 2px solid white;
     text-align: center;
     
+}
+
+.div {
+    text-align: center;
+    width: 175vh;
+    cursor: pointer;
 }
