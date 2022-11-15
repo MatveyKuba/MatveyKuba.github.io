@@ -6,15 +6,18 @@ let taskStyle = document.getElementById('tasks');
 let lowTask = document.getElementById('lowTasks');
 const del = document.querySelectorAll('.pop_up_close');
 let task = document.querySelectorAll('.tasks');
+let form = document.getElementById('form');
 
-subTask.addEventListener('click', function(){
-    let div = taskStyle.cloneNode(true);
+subTask.addEventListener('click' || form.onsubmit, function(){
+        let div = taskStyle.cloneNode(true);
         div.querySelector('.text').textContent = inpTask.value;
         lowTask.before(div);
-    div.addEventListener('click', function(){
+    
+        div.addEventListener('click', function(){
         this.remove();
     })
 })
+
 
 del.forEach((elem) => {
         elem.onclick = function() {
