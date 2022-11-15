@@ -24,6 +24,8 @@ input{
     border: 2px solid #aaa;
     margin-bottom: 8px;
     border-radius: 5px;
+   height: calc(line);
+    
  }
 
 .addTask {
@@ -92,6 +94,7 @@ input{
     font-size: 13px;
     cursor: pointer;
     color: #999;
+    
 }
 
 .tasks span {

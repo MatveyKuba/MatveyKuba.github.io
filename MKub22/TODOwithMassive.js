@@ -1,4 +1,32 @@
 "use strict"
+let addTasks = document.getElementById('addTask');
+let subTask = document.getElementById('sub');
+let inpTask = document.getElementById('inpTask');
+let taskStyle = document.getElementById('tasks');
+let lowTask = document.getElementById('lowTasks');
+const del = document.querySelectorAll('.pop_up_close');
+let task = document.querySelectorAll('.tasks');
+
+subTask.addEventListener('click', function(){
+    let div = taskStyle.cloneNode(true);
+        div.querySelector('.text').textContent = inpTask.value;
+        lowTask.before(div);
+    div.addEventListener('click', function(){
+        this.remove();
+    })
+})
+
+del.forEach((elem) => {
+        elem.onclick = function() {
+        this.parentNode.remove();
+    }
+})
+
+
+
+
+
+
 const statuses = {
     TODO : 'To Do:',
     DONE : 'Done:',

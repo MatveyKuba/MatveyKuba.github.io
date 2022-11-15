@@ -10,18 +10,18 @@
     <link rel="stylesheet" href="styleTODO.css">
 </head>
 <body>
-    <div class="todo">
+    <div class="todo" id="todo">
        <h2>HIGH</h2>
-        <div class="addTask">
-            <input type="text">
-            <button type="submit">+</button>
+        <div class="addTask" id="addTask">
+            <input type="text" id="inpTask">
+            <button type="submit" id="sub">+</button>
         </div>
     <div class="impTasks">
-        <div class="tasks">
+        <div class="tasks" id="tasks">
             <label class="task">
                 <input type="checkbox" value="1" class="rtg" >
                 <span class="check"></span>
-                <span class="text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla, nostrum.</span>
+                <span class="text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae, porro.</span>
             </label>
             <div class="pop_up_close" id="pop_up_close">&#10006</div>
         </div>
@@ -29,7 +29,7 @@
             <label class="task">
                 <input type="checkbox" value="1" class="rtg" >
                 <span class="check"></span>
-                <span class="text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla, nostrum.</span>
+                <span class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, quidem?Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet quidem fuga cupiditate rem vitae quo asperiores provident quae voluptatibus doloribus.</span>
               </label>
               <div class="pop_up_close" id="pop_up_close">&#10006</div>
             </div>
@@ -42,7 +42,7 @@
                   <div class="pop_up_close" id="pop_up_close">&#10006</div>
                 </div>
     </div>
-    <h2>LOW</h2>
+    <h2 id="lowTasks">LOW</h2>
     <div class="addTask">
         <input type="text">
         <button type="submit">+</button>
@@ -60,5 +60,5 @@
 </div>
     
 </body>
-<script type="module" src="calc.js"></script>
+<script src="TODOwithMassive.js"></script>
 </html>
