@@ -25,6 +25,9 @@ input{
     margin-bottom: 8px;
     border-radius: 5px;
    height: calc(line);
+   background-color: white;
+   
+   
     
  }
 
@@ -63,6 +66,7 @@ input{
 
 .rtg {
     display: none;
+    background-color: white;
   }
   
   .check {
@@ -74,6 +78,7 @@ input{
     height: 15px;
     border: 2px solid #999;
     border-radius: 12px;
+    background-color: white;
   }
   
   .check:before {
@@ -94,6 +99,7 @@ input{
     font-size: 13px;
     cursor: pointer;
     color: #999;
+    background-color: white;
     
 }
 
@@ -101,4 +107,13 @@ input{
     margin-top: 3px;
 }
 
-
+.text{
+    display: flex;
+    background-color: white;
+}
+body{
+    background-color:#FF1464;
+}
+input{
+    background-color: white;
+}
