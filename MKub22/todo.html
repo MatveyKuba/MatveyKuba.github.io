@@ -13,19 +13,19 @@
     <div class="todo" id="todo">
        <h2>HIGH</h2>
         <div class="addTask" id="addTask">
-            <form id="form" onsubmit="return false">
-            <input type="text" id="inpTask">
+            <form id="form">
+            <input type="text" id="inpTask" >
             <button type="submit" id="sub">+</button>
             </form>
         </div>
-    <div class="impTasks">
-        <div class="tasks" id="tasks">
+    <div class="impTasks" id="impTasks">
+        <!-- <div class="tasks" id="tasks">
             <label class="task">
-                <input type="checkbox" value="1" class="rtg" >
+                <input type="checkbox" value="1" class="rtg">
                 <span class="check"></span>
                 <span class="text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae, porro.</span>
+                <div class="pop_up_close" id="pop_up_close">&#10006</div>
             </label>
-            <div class="pop_up_close" id="pop_up_close">&#10006</div>
         </div>
         <div class="tasks">
             <label class="task">
@@ -42,22 +42,17 @@
                     <span class="text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla, nostrum.</span>
                   </label>
                   <div class="pop_up_close" id="pop_up_close">&#10006</div>
-                </div>
+                </div> -->
     </div>
-    <h2 id="lowTasks">LOW</h2>
+    <h2 class="lowTasks">LOW</h2>
     <div class="addTask">
-        <input type="text">
-        <button type="submit">+</button>
+        <form>
+        <input type="text" id="inpLowTask">
+        <button type="submit" id="sub2">+</button>
+    </form>
     </div>
-        <div class="lowTasks">
-            <div class="tasks">
-                <label class="task">
-                    <input type="checkbox" name="check1" value="1" class="rtg" >
-                    <span class="check"></span>
-                    <span class="text">Something new info</span>
-                  </label>
-                  <div class="pop_up_close" id="pop_up_close">&#10006</div>
-                </div>
+        <div id="lowTasks">
+     
         </div>
 </div>
     

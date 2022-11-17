@@ -1,30 +1,192 @@
 "use strict"
-let addTasks = document.getElementById('addTask');
+
 let subTask = document.getElementById('sub');
+let subLowTask = document.getElementById('sub2');
 let inpTask = document.getElementById('inpTask');
-let taskStyle = document.getElementById('tasks');
+let inpLowTask = document.getElementById('inpLowTask');
+let impTask = document.getElementById('impTasks')
 let lowTask = document.getElementById('lowTasks');
-const del = document.querySelectorAll('.pop_up_close');
-let task = document.querySelectorAll('.tasks');
-let form = document.getElementById('form');
+
 
 subTask.addEventListener('click', function(){
-    let div = taskStyle.cloneNode(true);
-        div.querySelector('.text').textContent = inpTask.value;
-        lowTask.before(div);
+   
 
-    div.addEventListener('click', function(){
-        this.remove();
+    let div = document.createElement('div');
+    let elemLabel = document.createElement('label');
+    let elemCheck = document.createElement('check');
+    let checkBox = document.createElement('input');
+    let close = document.createElement('pop_up_close');
+    let elemText = document.createElement('text');
+    
+    checkBox.className = 'rtg';
+    checkBox.type = 'checkbox'
+    elemCheck.className = 'check';
+    elemLabel.className = 'task';
+    close.className = 'pop_up_close';
+    elemText.className = 'text';
+    div.className = 'tasks';
+    
+    elemText.textContent = inpTask.value;
+    close.innerHTML = '&#10006';
+ 
+
+    
+    elemLabel.append(checkBox);
+    elemLabel.append(elemCheck);
+    elemLabel.append(elemText);
+    div.append(close);
+    div.append(elemLabel);
+    impTask.append(div);
+
+
+    event.preventDefault();
+        
+    addTask(inpTask.value,priorities.HIGH);
+    
+    document.querySelectorAll('.pop_up_close').forEach((elem) => {
+        elem.onclick = function() {    
+            deleteTask(inpTask);
+            this.parentNode.remove();
+        }
     })
+    
+    document.querySelectorAll('.rtg').forEach((elem1) => {
+            elem1.onclick = function(){
+                    changeStatus(this.parentNode.childNodes[2].textContent, statuses.DONE);
+                    console.log(this.parentNode.childNodes[2].innerHTML);
+                }})
+               
+   
+  
+    // render();
+    console.log(list)
 })
 
-del.forEach((elem) => {
-        elem.onclick = function() {
-        this.parentNode.remove();
+
+
+
+subLowTask.addEventListener('click', function(){
+    
+    let div = document.createElement('div');
+    let elemLabel = document.createElement('label');
+    let elemCheck = document.createElement('check');
+    let checkBox = document.createElement('input');
+    let close = document.createElement('pop_up_close');
+    let elemText = document.createElement('text');
+    
+    checkBox.className = 'rtg';
+    checkBox.type = 'checkbox'
+    elemCheck.className = 'check';
+    elemLabel.className = 'task';
+    close.className = 'pop_up_close';
+    elemText.className = 'text';
+    div.className = 'tasks';
+    
+    elemText.textContent = inpLowTask.value;
+    close.innerHTML = '&#10006';
+    
+    elemLabel.append(checkBox);
+    elemLabel.append(elemCheck);
+    elemLabel.append(elemText);
+    div.append(close);
+    div.append(elemLabel);
+    lowTask.append(div);
+
+    event.preventDefault();
+    
+    addTask(inpLowTask.value,priorities.LOW);
+    
+    document.querySelectorAll('.pop_up_close').forEach((elem) => {
+        elem.onclick = function() {    
+            deleteTask(inpLowTask);
+            this.parentNode.remove();
+        }
+    })
+
+    document.querySelectorAll('.rtg').forEach((elem1) => {
+        elem1.onclick = function(){
+                changeStatus(this.parentNode.childNodes[2].textContent, statuses.DONE);
+                
+            }})
+    // document.querySelectorAll('.rtg').forEach((elem1) => {
+    //     elem1.onclick = function(){
+    //         changeStatus(inpLowTask.value, statuses.DONE);
+    //         console.log(list);
+    //     }
+    // })
+    // render2();
+    console.log(list);
+})
+
+
+function render(){
+
+    if (list.find(item => item.priority == priorities.HIGH)){
+        showCategoryHigh();
     }
-})
+
+}
+function render2(){
+
+    if (list.find(item => item.priority == priorities.LOW)){
+        showCategoryLow();
+    }
+
+}
 
 
+function showCategoryHigh(){
+    let div = document.createElement('div');
+    let elemLabel = document.createElement('label');
+    let elemCheck = document.createElement('check');
+    let checkBox = document.createElement('input');
+    let close = document.createElement('pop_up_close');
+    let elemText = document.createElement('text');
+    
+    checkBox.className = 'rtg';
+    checkBox.type = 'checkbox'
+    elemCheck.className = 'check';
+    elemLabel.className = 'task';
+    close.className = 'pop_up_close';
+    elemText.className = 'text';
+    div.className = 'tasks';
+    
+    elemText.textContent = inpTask.value;
+    close.innerHTML = '&#10006';
+    
+    elemLabel.append(checkBox);
+    elemLabel.append(elemCheck);
+    elemLabel.append(elemText);
+    div.append(close);
+    div.append(elemLabel);
+    impTask.append(div);
+}
+function showCategoryLow(){
+    let div = document.createElement('div');
+    let elemLabel = document.createElement('label');
+    let elemCheck = document.createElement('check');
+    let checkBox = document.createElement('input');
+    let close = document.createElement('pop_up_close');
+    let elemText = document.createElement('text');
+    
+    checkBox.className = 'rtg';
+    checkBox.type = 'checkbox'
+    elemCheck.className = 'check';
+    elemLabel.className = 'task';
+    close.className = 'pop_up_close';
+    elemText.className = 'text';
+    div.className = 'tasks';
+    
+    elemText.textContent = inpLowTask.value;
+    close.innerHTML = '&#10006';
+    
+    elemLabel.append(checkBox);
+    elemLabel.append(elemCheck);
+    elemLabel.append(elemText);
+    div.append(close);
+    div.append(elemLabel);
+    lowTask.append(div);
+}
 
 
 
@@ -36,19 +198,12 @@ const statuses = {
 }
 const priorities = {
     HIGH : 'High',
-    MEDIUM : "Medium",
     LOW : 'Low',
 }
-// const list = {
-// 	"create a new practice task": "In Progress:",
-// 	"make a bed": "Done:",
-// 	"write a post": "To Do:",
-// };
-
 const list = [
-    {name: 'make a bed', status: 'Done:', priority: "Low"},
-    {name: 'write a post', status: 'To Do:', priority: "Medium"},
-    {name: 'create a task', status: 'In progress:', priority: "High"},
+    // {name: 'make a bed', status: 'Done:', priority: "Low"},
+    // {name: 'write a post', status: 'To Do:', priority: "High"},
+    // {name: 'create a task', status: 'In progress:', priority: "High"},
 ]
 
 let keys = {
@@ -58,11 +213,11 @@ let keys = {
 
 }
 
-function changeStatus(task, newStatus) {
-    if (list.find(item => item.name == task) === undefined) {
-     console.log(`can't change "${task}" to "${newStatus}" cause there's no such task`);
+function changeStatus(elemText, newStatus) {
+    if (list.find(item => item.name == elemText) === undefined) {
+     console.log(`can't change "${elemText}" to "${newStatus}" cause there's no such task`);
     } else {
-     list.find(item => item.name == task).status = newStatus;
+     list.find(item => item.name == elemText).status = statuses.DONE;
     }
  }
 
@@ -81,8 +236,7 @@ function addTask(newTask, prior){
     if(!newTask) {
         console.log('Введите задачу');
     }
-    // list[newTask.status] = 'To Do:';
-    list.splice(4, 0, newTask);
+    list.push(newTask);
 }
 
 function showCategory(cat) {
@@ -103,13 +257,12 @@ function showList() {
     showCategory(statuses.DONE)
 }
 
+// deleteTask('make a bed');
+// addTask('catch sone', priorities.HIGH);
+// changeStatus('write a post', 'Done:');
+// changeStatus('catch sone', 'Done:');
+// addTask('make a shower', priorities.HIGH);
+// addTask('create smth', priorities.LOW);
+// changeStatus('create smth', 'In Progress:');
+// deleteTask('create smth');
 
-deleteTask('make a bed');
-addTask('catch sone', priorities.MEDIUM);
-changeStatus('write a post', 'Done:');
-changeStatus('catch sone', 'Done:');
-addTask('make a shower', priorities.HIGH);
-addTask('create smth', priorities.LOW);
-changeStatus('create smth', 'In Progress:');
-deleteTask('create smth');
-showList();
