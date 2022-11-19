@@ -10,137 +10,48 @@ let lowTask = document.getElementById('lowTasks');
 
 subTask.addEventListener('click', function(){
    
-
-    let div = document.createElement('div');
-    let elemLabel = document.createElement('label');
-    let elemCheck = document.createElement('check');
-    let checkBox = document.createElement('input');
-    let close = document.createElement('pop_up_close');
-    let elemText = document.createElement('text');
-    
-    checkBox.className = 'rtg';
-    checkBox.type = 'checkbox'
-    elemCheck.className = 'check';
-    elemLabel.className = 'task';
-    close.className = 'pop_up_close';
-    elemText.className = 'text';
-    div.className = 'tasks';
-    
-    elemText.textContent = inpTask.value;
-    close.innerHTML = '&#10006';
- 
-
-    
-    elemLabel.append(checkBox);
-    elemLabel.append(elemCheck);
-    elemLabel.append(elemText);
-    div.append(close);
-    div.append(elemLabel);
-    impTask.append(div);
-
-
     event.preventDefault();
-        
+    
     addTask(inpTask.value,priorities.HIGH);
     
-    document.querySelectorAll('.pop_up_close').forEach((elem) => {
-        elem.onclick = function() {    
-            deleteTask(inpTask);
-            this.parentNode.remove();
-        }
-    })
-    
-    document.querySelectorAll('.rtg').forEach((elem1) => {
-            elem1.onclick = function(){
-                    changeStatus(this.parentNode.childNodes[2].textContent, statuses.DONE);
-                    console.log(this.parentNode.childNodes[2].innerHTML);
-                }})
-               
-   
-  
-    // render();
+    render();
     console.log(list)
 })
 
-
-
-
+    
+    
 subLowTask.addEventListener('click', function(){
-    
-    let div = document.createElement('div');
-    let elemLabel = document.createElement('label');
-    let elemCheck = document.createElement('check');
-    let checkBox = document.createElement('input');
-    let close = document.createElement('pop_up_close');
-    let elemText = document.createElement('text');
-    
-    checkBox.className = 'rtg';
-    checkBox.type = 'checkbox'
-    elemCheck.className = 'check';
-    elemLabel.className = 'task';
-    close.className = 'pop_up_close';
-    elemText.className = 'text';
-    div.className = 'tasks';
-    
-    elemText.textContent = inpLowTask.value;
-    close.innerHTML = '&#10006';
-    
-    elemLabel.append(checkBox);
-    elemLabel.append(elemCheck);
-    elemLabel.append(elemText);
-    div.append(close);
-    div.append(elemLabel);
-    lowTask.append(div);
-
     event.preventDefault();
-    
-    addTask(inpLowTask.value,priorities.LOW);
-    
-    document.querySelectorAll('.pop_up_close').forEach((elem) => {
-        elem.onclick = function() {    
-            deleteTask(inpLowTask);
-            this.parentNode.remove();
-        }
-    })
 
-    document.querySelectorAll('.rtg').forEach((elem1) => {
-        elem1.onclick = function(){
-                changeStatus(this.parentNode.childNodes[2].textContent, statuses.DONE);
-                
-            }})
-    // document.querySelectorAll('.rtg').forEach((elem1) => {
-    //     elem1.onclick = function(){
-    //         changeStatus(inpLowTask.value, statuses.DONE);
-    //         console.log(list);
-    //     }
-    // })
-    // render2();
+    addTask(inpLowTask.value,priorities.LOW);
+    render();    
     console.log(list);
 })
 
 
-function render(){
-
-    if (list.find(item => item.priority == priorities.HIGH)){
-        showCategoryHigh();
-    }
-
-}
-function render2(){
-
-    if (list.find(item => item.priority == priorities.LOW)){
-        showCategoryLow();
-    }
-
+function render (){
+    
+    impTask.textContent="";
+    lowTask.textContent="";
+for (let item of list) {
+	if (item.priority == priorities.HIGH) {
+		addHigh(item.name);
+	} else if (item.priority == priorities.LOW) {
+		addLow(item.name);
+	}
 }
 
+}
+function addHigh(task){
 
-function showCategoryHigh(){
+   
     let div = document.createElement('div');
+   
     let elemLabel = document.createElement('label');
     let elemCheck = document.createElement('check');
     let checkBox = document.createElement('input');
     let close = document.createElement('pop_up_close');
+    
     let elemText = document.createElement('text');
     
     checkBox.className = 'rtg';
@@ -150,19 +61,130 @@ function showCategoryHigh(){
     close.className = 'pop_up_close';
     elemText.className = 'text';
     div.className = 'tasks';
-    
-    elemText.textContent = inpTask.value;
     close.innerHTML = '&#10006';
     
+    elemText.textContent = task;
+  
     elemLabel.append(checkBox);
     elemLabel.append(elemCheck);
     elemLabel.append(elemText);
     div.append(close);
     div.append(elemLabel);
+    
     impTask.append(div);
+
+    //функция удаления
+//     document.querySelectorAll('.pop_up_close').forEach((elem1) => {
+//         elem1.onclick = function(){
+//         deleteTask(task.name);
+//         render();
+//     }
+    
+// })
+    close.addEventListener('click', function(){
+        deleteTask(task);
+        render();
+    })
+    checkBox.addEventListener('click', function(){
+        if(this.checked){
+                    changeStatus(task, statuses.DONE);
+                }
+            else if(!this.checked){
+                changeStatus(task, statuses.TODO);
+                console.log('gg');
+            }
+    })
+    
+    // document.querySelectorAll('.rtg').forEach((elem1) => {
+       
+    // elem1.onclick = function(){
+    //         if(this.checked){
+    //         changeStatus(this.parentNode.childNodes[2].textContent, statuses.DONE);
+    //     }
+    // else if(!this.checked){
+    //     changeStatus(this.parentNode.childNodes[2].textContent, statuses.TODO);
+    //     console.log('gg');
+    // }
+    // }})
+
+        
+    
 }
-function showCategoryLow(){
+
+function addLow(task){
+
+   
     let div = document.createElement('div');
+   
+    let elemLabel = document.createElement('label');
+    let elemCheck = document.createElement('check');
+    let checkBox = document.createElement('input');
+    let close = document.createElement('pop_up_close');
+    
+    let elemText = document.createElement('text');
+    
+    checkBox.className = 'rtg';
+    checkBox.type = 'checkbox'
+    elemCheck.className = 'check';
+    elemLabel.className = 'task';
+    close.className = 'pop_up_close';
+    elemText.className = 'text';
+    div.className = 'tasks';
+    close.innerHTML = '&#10006';
+    
+    elemText.textContent = task;
+  
+    elemLabel.append(checkBox);
+    elemLabel.append(elemCheck);
+    elemLabel.append(elemText);
+    div.append(close);
+    div.append(elemLabel);
+    
+    lowTask.append(div);
+
+    //функция удаления
+//     document.querySelectorAll('.pop_up_close').forEach((elem1) => {
+//         elem1.onclick = function(){
+//         deleteTask(task.name);
+//         render();
+//     }
+    
+// })
+close.addEventListener('click', function(){
+    deleteTask(task);
+    render();
+})
+checkBox.addEventListener('click', function(){
+    if(this.checked){
+                changeStatus(this.parentNode.childNodes[2].textContent, statuses.DONE);
+            }
+        else if(!this.checked){
+            changeStatus(this.parentNode.childNodes[2].textContent, statuses.TODO);
+            console.log('gg');
+        }
+})
+    
+    // document.querySelectorAll('.rtg').forEach((elem1) => {
+       
+    // elem1.onclick = function(){
+    //         if(this.checked){
+    //         changeStatus(this.parentNode.childNodes[2].textContent, statuses.DONE);
+    //     }
+    // else if(!this.checked){
+    //     changeStatus(this.parentNode.childNodes[2].textContent, statuses.TODO);
+    //     console.log('gg');
+    // }
+    // }})
+
+        
+    
+}
+
+function addLow2(){
+    lowTask.textContent="";
+    for (let task of list){
+    let div = document.createElement('div');
+   
     let elemLabel = document.createElement('label');
     let elemCheck = document.createElement('check');
     let checkBox = document.createElement('input');
@@ -176,16 +198,32 @@ function showCategoryLow(){
     close.className = 'pop_up_close';
     elemText.className = 'text';
     div.className = 'tasks';
-    
-    elemText.textContent = inpLowTask.value;
     close.innerHTML = '&#10006';
     
+    elemText.textContent = task.name;
+    console.log( task.name);
+  
     elemLabel.append(checkBox);
     elemLabel.append(elemCheck);
     elemLabel.append(elemText);
     div.append(close);
     div.append(elemLabel);
+    
     lowTask.append(div);
+
+    document.querySelectorAll('.rtg').forEach((elem1) => {
+       
+        elem1.onclick = function(){
+            if(this.checked){
+            changeStatus(this.parentNode.childNodes[2].textContent, statuses.DONE);
+            
+        }
+    else if(!this.checked){
+        changeStatus(this.parentNode.childNodes[2].textContent, statuses.TODO);
+        console.log('gg');
+    }
+    }})
+}
 }
 
 
@@ -201,9 +239,7 @@ const priorities = {
     LOW : 'Low',
 }
 const list = [
-    // {name: 'make a bed', status: 'Done:', priority: "Low"},
-    // {name: 'write a post', status: 'To Do:', priority: "High"},
-    // {name: 'create a task', status: 'In progress:', priority: "High"},
+
 ]
 
 let keys = {
@@ -217,7 +253,7 @@ function changeStatus(elemText, newStatus) {
     if (list.find(item => item.name == elemText) === undefined) {
      console.log(`can't change "${elemText}" to "${newStatus}" cause there's no such task`);
     } else {
-     list.find(item => item.name == elemText).status = statuses.DONE;
+     list.find(item => item.name == elemText).status = newStatus;
     }
  }
 
