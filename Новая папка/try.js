@@ -1,21 +1,19 @@
 "use strict"
 const inpName = document.getElementById('inputName');
 const send = document.getElementById('send');
-const firstName = ""; 
 const serverUrl = 'https://api.genderize.io';
-const url = `${serverUrl}?name=${firstName}`;
 
 
 
 send.addEventListener('click', function(){
     event.preventDefault();
-    firstName == inpName.value;
+    let firstName = `${inpName.value}`;
+    const url = `${serverUrl}?name=${firstName}`;
     let response = fetch(url);
-    response.onload = () => resolve(male);
+    response.onload = () => resolve(response);
     response.onerror = () => reject(new Error(`Ошибка загрузки скрипта ${url}`));
-    let male = response.json();
-
-   promise.then(
+    console.log(firstName);
+   response.then(
     response => alert(`${firstName} is ${response.gender} with probability ${response.probability}`),
     error => alert(`Ошибка: ${error.message}`)
    );
