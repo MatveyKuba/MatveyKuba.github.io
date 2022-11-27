@@ -1,0 +1,175 @@
+table {
+  border-collapse: collapse; 
+  width: 450px;
+  height: 350px;
+}
+
+body{
+ display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  background-color: aqua;
+}
+.now{
+  display: flex;
+  margin-top: 30px;
+}
+.forecast{
+  margin-top: 30px;
+  display: flex;
+ 
+}
+.details{
+  margin-top: 30px;
+  display: flex;
+}
+
+th {
+    padding: 10px; 
+    border: 2px solid black;
+  }
+
+  td {
+    padding: 5px 7px;
+    border: 2px solid black;
+  }
+.search{
+  width: 95%;
+  justify-content: center;
+  box-sizing: border-box;
+  outline: none;
+  border: 2px solid aqua;
+  background-color: aqua;
+
+}
+.forSearch{
+  position: relative;
+}
+.forSearch button[type="submit"] {
+  position: absolute;
+  top: 8px;
+  bottom: 13px;
+  right: 18px;
+  color: #666;
+  border: 0;
+  padding: 0 10px;
+  border-radius: 50%;
+  background-color: aqua;
+  outline: none;
+  cursor: pointer;
+  font-size: 20px;
+  
+}
+.temperature{
+  font-size: 50px;
+}
+  img{
+    justify-content: center;
+    text-align: center;
+    margin: 0 35%;
+    margin-top: 20px;
+  }
+
+.city{
+  position: relative;
+  margin-top: 60px;
+}
+
+.like{
+  position: absolute;
+  right: 20px;
+  bottom: 5px;
+}
+
+.locations{
+  padding: 0;
+}
+hr{
+  width: 100%;
+  border-width: 1px;
+  border-color: black;
+}
+.locations li{
+
+ list-style: none;
+ padding: 5px;
+}
+.locations h2{
+  padding: 5px;
+  line-height: 1%;
+ }
+
+
+ .screens1{
+  display: flex;
+  position: relative;
+  justify-content: flex-end;
+  bottom: -17px;
+  margin-left: -4%;
+  margin-right: -4%;
+  align-items: flex-end;
+  align-content: flex-end;
+ }
+ .screens1 button{
+  display: inline-flex;
+  flex: 0 0 33.33%;
+  border-radius: 0%;
+  cursor: pointer;
+  background-color: aqua;
+  color: black;
+  align-items: flex-end;
+  align-content: flex-end;
+
+ }
+.screens1 button:hover {
+  color: white;
+  background-color: black;
+}
+
+
+
+
+.list_details {
+  list-style: none;
+  margin-top: 50px;
+  margin-bottom: 32px;
+  font-size: 25px;
+}
+.about .chosenCity{
+  margin-bottom: 40px;
+  font-size: 25px;
+}
+
+
+
+.screens1 button:hover {
+  color: white;
+  background-color: black;
+}
+
+
+.weatherOnTime{
+  border: 1px solid white;
+  margin: 10px;
+}
+
+.dateNtime{
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+}
+
+.tempNfeels{
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+}
+
+.table-scroll{
+  overflow-x: auto;
+  height: 250px;
+}
+.iconWeather {
+  margin-top: -20px;
+  margin-left: -3%;
+}
