@@ -1,7 +1,7 @@
 table {
   border-collapse: collapse; 
   width: 450px;
-  height: 350px;
+  height: 370px;
 }
 
 body{
@@ -9,19 +9,21 @@ body{
   justify-content: space-around;
   align-items: flex-start;
   background-color: aqua;
+  font-family: 'Roboto', sans-serif;
+
 }
-.now{
-  display: flex;
+#now{
+  display: block;
   margin-top: 30px;
 }
-.forecast{
+#forecast{
   margin-top: 30px;
-  display: flex;
+  display: none;
  
 }
-.details{
+#details{
   margin-top: 30px;
-  display: flex;
+  display: none;
 }
 
 th {
@@ -32,6 +34,7 @@ th {
   td {
     padding: 5px 7px;
     border: 2px solid black;
+    width: 310px;
   }
 .search{
   width: 95%;
@@ -68,11 +71,13 @@ th {
     text-align: center;
     margin: 0 35%;
     margin-top: 20px;
+    width: 78px;
+    height: 79px;
   }
 
 .city{
   position: relative;
-  margin-top: 60px;
+  margin-top: 55px;
 }
 
 .like{
@@ -104,7 +109,7 @@ hr{
   display: flex;
   position: relative;
   justify-content: flex-end;
-  bottom: -17px;
+  bottom: -18px;
   margin-left: -4%;
   margin-right: -4%;
   align-items: flex-end;
@@ -132,11 +137,11 @@ hr{
 .list_details {
   list-style: none;
   margin-top: 50px;
-  margin-bottom: 32px;
+  margin-bottom: 20px;
   font-size: 25px;
 }
 .about .chosenCity{
-  margin-bottom: 40px;
+  margin-bottom: 66px;
   font-size: 25px;
 }
 
@@ -168,8 +173,37 @@ hr{
 .table-scroll{
   overflow-x: auto;
   height: 250px;
+  margin-bottom: 16px;
+
 }
 .iconWeather {
   margin-top: -20px;
   margin-left: -3%;
+  height: 31px;
+  width: 31px;
+}
+
+
+#details.active{
+  display: block;
+}
+
+
+#forecast.active{
+  display: block;
+}
+
+#now.active{
+  display: block;
+}
+#now.none{
+  display: none;
+}
+
+#details.none{
+  display: none;
+}
+
+#forecast.none{
+  display: none;
 }

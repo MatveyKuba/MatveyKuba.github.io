@@ -6,33 +6,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="weather.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="now">
+    <div id="now">
         <table>
             <tr>
                 <th colspan="2" class="forSearch">
-                <input type="text" class="search">
-                <button type="submit">&#128269</button>
+                <form>
+                    <input id="inpCity" type="text" class="search">
+                    <button id='searchCity' type="submit">&#128269</button>
+                </form>
                 </th>
             </tr>
             <tr>
                 <td class="about">
                     <div class="aboutS">
-                    <div class="temperature">
+                    <div class="temperature" id="temp">
                         14° 
                     </div>
-                    <div>
+                    <div class="imageTemp">
                         <img src="./png/icons8-cloud-96 1.png" alt="">
                     </div>
-                    <div class="city">
-                        <h2>Aktobe</h2>
+                    <div class="city" id="city">
+                        <h2 id="cityCurrentName">Aktobe</h2>
                         <button class="like">+</button>
                     </div>
                     <div class="screens1">
-                        <button>Now</button>
-                        <button>Details</button>
-                        <button>Forecast</button>
+                        <button class="nowBtn" id="nowBtn">Now</button>
+                        <button id="detailsBtn">Details</button>
+                        <button id="forecastBtn">Forecast</button>
                     </div>
                 </div>
                 </td>
@@ -57,7 +62,7 @@
         </table>
     </div>
 
-    <div class="details" >
+    <div id="details" >
         <table>
             <tr>
                 <th colspan="2" class="forSearch">
@@ -79,9 +84,9 @@
                         <li>Sunset: 18.54</li>
                     </div>
                     <div class="screens1">
-                        <button>Now</button>
-                        <button>Details</button>
-                        <button>Forecast</button>
+                        <button id="nowBtn2">Now</button>
+                        <button id="detailsBtn2">Details</button>
+                        <button id="forecastBtn2">Forecast</button>
                     </div>
                 </div>
                 </td>
@@ -106,7 +111,7 @@
         </table>
     </div>
 
-    <div class="forecast">
+    <div id="forecast">
         <table>
             <tr>
                 <th colspan="2" class="forSearch">
@@ -168,8 +173,8 @@
                     </div>
                 </div>
                 <div class="screens1">
-                    <button>Now</button>
-                    <button>Details</button>
+                    <button id="nowBtn3">Now</button>
+                    <button id="detailsBtn3">Details</button>
                     <button>Forecast</button>
                 </div>
                 </td>
@@ -194,4 +199,5 @@
         </table>
     </div>
 </body>
+<script src="weather.js"></script>
 </html>
