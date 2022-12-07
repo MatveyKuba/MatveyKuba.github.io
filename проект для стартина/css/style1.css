@@ -17,12 +17,8 @@ body {
     width: 320px;/*ширина круга*/
     height: 320px;/*высота круга*/
     border-radius: 50%;/*скругление углов*/
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
     background: #FFFFFF;/*цвет круга*/
-   /* margin-left: 45%;
-   margin-top: 15%; */
+
 
 }
 
@@ -35,7 +31,7 @@ body {
 p span {
     position: absolute;
     left: 50%;/*позиция слева*/
-    font-size: 1.3em;/*размер шрифта*/
+    font-size: 1.8em;/*размер шрифта*/
     font-weight: 600;
     transform-origin: 0 158px;/*точка исхода трансформации*/
 }   
@@ -52,7 +48,7 @@ p span {
 #playable0{
     justify-content: center;
     text-align: center;
-    top: 32px;
+    top: 35px;
     right: 35px;
     z-index: 1000;
     position: absolute;
