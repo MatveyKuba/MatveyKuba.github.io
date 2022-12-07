@@ -1,0 +1,59 @@
+
+body {
+    background: url(../img/фон\ сайта.png) 100% 100%/100% 110% no-repeat;
+    font-family: 'FranklinGot', sans-serif;
+
+}
+.container{
+    min-height:100vh;
+}
+@font-face {
+	font-family: 'FranklinGot';
+	src: url('../fonts/Grafita\ Special\ DEMO.otf');
+	
+}
+.circle {
+    position: relative;/*относительное позиционирование*/
+    width: 320px;/*ширина круга*/
+    height: 320px;/*высота круга*/
+    border-radius: 50%;/*скругление углов*/
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    background: #FFFFFF;/*цвет круга*/
+   /* margin-left: 45%;
+   margin-top: 15%; */
+
+}
+
+.text1 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    animation: animate 15s linear infinite;/*свойства анимации*/
+}
+p span {
+    position: absolute;
+    left: 50%;/*позиция слева*/
+    font-size: 1.3em;/*размер шрифта*/
+    font-weight: 600;
+    transform-origin: 0 158px;/*точка исхода трансформации*/
+}   
+@keyframes animate {
+    0%
+    {
+        transform: rotate(360deg);
+    }
+    100%
+    {
+        transform: rotate(0deg);
+    }
+}
+#playable0{
+    justify-content: center;
+    text-align: center;
+    top: 32px;
+    right: 35px;
+    z-index: 1000;
+    position: absolute;
+}
