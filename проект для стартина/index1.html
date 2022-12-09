@@ -16,7 +16,8 @@
     <link rel="stylesheet" href="css/font-awesome.css">
     <link rel="stylesheet" href="css/animate.min.css"/>
     <link rel="stylesheet" href="css/progres-bar.css">
-
+    <link rel="preconnect" href="https://rsms.me/">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
      <link
       rel="stylesheet"
       href="js/swiper-bundle.min.css"
@@ -24,9 +25,66 @@
     <link  href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
 </head>
 <body>
-  <div class="container d-flex justify-content-center align-items-center  ">
-   
-   <div class="row ">
+  <div class="pop_up" id="pop_up">
+    <div class="pop_up_container">
+        <div class="pop_up_body" id="pop_up_body">
+            <p>Введите цвет вашего ключа и через пробел цифру актера</p>
+            <form type="submit" id="pop_ups">
+                <input type="radio"  id="red" name="radio">
+                <label for="red" class="red">Красный</label>
+                <input type="radio"  id="orange" name="radio">
+                <label for="orange" class="orange">Оранжевый</label>
+                <input type="radio"  id="purple" name="radio">
+                <label for="purple" class="purple">Фиолетовый</label>
+                <input type="radio"  id="blue" name="radio">
+                <label for="blue" class="blue">Синий</label>
+                <input type="radio"  id="green" name="radio">
+                <label for="green" class="green">Зелёный</label>
+                <input type="text" name="pop_name" id="pop_name" required placeholder="Цвет : цифра">
+                <button type="submit" class="submit1" name="submit1" id="submit1" value="Получить аудио">Получить аудио</button>
+            </form>
+            <div class="pop_up_close" id="pop_up_close">&#10006</div>
+        </div>
+    </div>
+</div>
+<div class="main">
+  <div class="container d-flex justify-content-center align-items-center">
+    <div class="row">
+      <div class="circleForth d-flex justify-content-center align-items-center">
+        <div class="circleThird d-flex justify-content-center align-items-center">
+          <div class="circleSecond d-flex justify-content-center align-items-center">
+            <div class="circleFirst d-flex justify-content-center align-items-center">
+              <div class="buttonQuestion">
+                <button class="question">?</button>
+              </div>
+            <div class="text2">
+              <p>starteen starteen starteen starteen starteen </p>
+            </div>
+            </div>
+            <div class="text3 justify-content-center align-items-center">
+              <p class="t3">Может ли он что<span class="sign">?</span>то изменить Может ли он что </p>
+            </div>
+          </div>
+          <div class="text4 justify-content-center align-items-center">
+            <p class="t4">Человек так бессилен в той или иной ситуации </p>
+          </div>
+          </div>
+          <div class="text5 justify-content-center align-items-center">
+            <p class="t5">Всегда ли у него есть выбор Всегда ли у него  </p>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="mainQuestion">
+ 
+  <div class="container questionContainer d-flex justify-content-center align-items-center  ">
+    <div class="row justify-content-center ">
+      <h2 class="nameOfCompit"></h2>
+    </div>
+   <div class="row">
     <div class="circle align-self-center">
         <div class="logo">
             <div class="mediPlayer">
@@ -34,12 +92,13 @@
               </div>
         </div>
         <div class="text1">
-            <p>starteen starteen starteen starteen starteen </p>
+            <p></p>
         </div>
         </div>
     
       </div>
     </div>
+  </div>
     </body>
         
 
@@ -62,7 +121,7 @@
     // .join(" ");
 </script>  
 
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
 <script src="js/jquery.magnific-popup.min.js"></script>
 <script src="js/wow.min.js"></script>

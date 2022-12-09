@@ -1,32 +1,101 @@
 
 body {
     background: url(../img/фон\ сайта.png) 100% 100%/100% 110% no-repeat;
-    font-family: 'FranklinGot', sans-serif;
+    font-family: 'Grafita', sans-serif;
 
 }
 .container{
     min-height:100vh;
 }
 @font-face {
-	font-family: 'FranklinGot';
+	font-family: 'Grafita';
 	src: url('../fonts/Grafita\ Special\ DEMO.otf');
 	
+}
+:root { font-family: 'Inter', sans-serif; }
+@supports (font-variation-settings: normal) {
+  :root { font-family: 'Inter var', sans-serif; }
 }
 .circle {
     position: relative;/*относительное позиционирование*/
     width: 320px;/*ширина круга*/
     height: 320px;/*высота круга*/
     border-radius: 50%;/*скругление углов*/
-    background: #FFFFFF;/*цвет круга*/
-
+    background:linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
 
 }
 
+
+.circleFirst{
+    position: relative;/*относительное позиционирование*/
+    width: 320px;/*ширина круга*/
+    height: 320px;/*высота круга*/
+    border-radius: 50%;/*скругление углов*/
+    background:linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.circleSecond {
+    position: relative; /*относительное позиционирование*/
+    width: 420px;/*ширина круга*/
+    height: 420px;/*высота круга*/
+    border-radius: 50%;/*скругление углов*/
+    background:linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+}
+.circleThird {
+    position: relative;
+    /*относительное позиционирование*/
+     width: 520px;/*ширина круга*/
+     height: 520px;/*высота круга*/
+     border-radius: 50%;/*скругление углов*/
+     background:linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+ 
+ }
+
+ .circleForth{
+    position: relative;
+    /*относительное позиционирование*/
+     width: 620px;/*ширина круга*/
+     height: 620px;/*высота круга*/
+     border-radius: 50%;/*скругление углов*/
+     background:linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+ }
+
 .text1 {
+    top: 0;
     position: absolute;
     width: 100%;
     height: 100%;
     animation: animate 15s linear infinite;/*свойства анимации*/
+}
+.text2 {
+    top: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    animation: animate 15s linear infinite;/*свойства анимации*/
+}
+.text3{
+    position: absolute;
+    top: 0;
+    animation: animateReverse 18s linear infinite;
+    width: 100%;
+    height: 100%;   
+}
+
+.text4{
+    position: absolute;
+    top: 0;
+    animation: animate 18s linear infinite;
+    width: 100%;
+    height: 100%; 
+}
+
+.text5{
+    position: absolute;
+    top: 0;
+    animation: animateReverse 18s linear infinite;
+    width: 100%;
+    height: 100%; 
 }
 p span {
     position: absolute;
@@ -35,6 +104,27 @@ p span {
     font-weight: 600;
     transform-origin: 0 158px;/*точка исхода трансформации*/
 }   
+
+.t3 span {
+    position: absolute;/*позиция слева*/
+    font-size: 1.8em;/*размер шрифта*/
+    font-weight: 600;
+    transform-origin: 0 208px;/*точка исхода трансформации*/
+}  
+
+.t4 span {
+    position: absolute;/*позиция слева*/
+    font-size: 1.8em;/*размер шрифта*/
+    font-weight: 600;
+    transform-origin: 0 258px;/*точка исхода трансформации*/
+}
+
+.t5 span {
+    position: absolute;/*позиция слева*/
+    font-size: 1.8em;/*размер шрифта*/
+    font-weight: 600;
+    transform-origin: 0 308px;/*точка исхода трансформации*/
+}
 @keyframes animate {
     0%
     {
@@ -45,6 +135,16 @@ p span {
         transform: rotate(0deg);
     }
 }
+@keyframes animateReverse {
+    0%
+    {
+        transform: rotate(0deg);
+    }
+    100%
+    {
+        transform: rotate(360deg);
+    }
+}
 #playable0{
     justify-content: center;
     text-align: center;
@@ -52,4 +152,194 @@ p span {
     right: 35px;
     z-index: 1000;
     position: absolute;
+}
+
+svg {
+    stroke-dasharray: 300;
+    /* stroke-dashoffset: 300; */
+    transition: all .8s ease-in-out;
+  }
+
+.question{
+    position: absolute;
+    top: 40px;
+    right: 45px;
+    font-size: 164px;
+    color: white;
+    font-family: 'Inter', 'Arial Narrow', Arial, sans-serif;
+    border-radius: 120px;
+    width: 230px;
+    height: 230px;
+    background: radial-gradient(circle at center, black 0, #1C1C1C, #202020 100%);
+    cursor: pointer;
+    z-index: 1000;
+  }
+
+  .pop_up{
+    
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: transparent;
+    z-index: 3000;
+    transform: translateY(-24.5%) scale(0);
+    transition: .4s ease-in-out
+}
+.pop_up.open {
+    transform: translateY(0%) scale(100%);
+    background-color: rgba(0, 0, 0, .8);
+}
+.pop_up_container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+.pop_up_body{
+    margin: auto;
+    width: 500px;
+    background-color: #fff;
+    border-radius: 10px;
+    text-align: center;
+    padding: 100px 15px 110px 15px;
+    position: relative;
+}
+.pop_up_body{
+    font-size: 28px;
+    font-weight: 600;
+    color: #22262D;
+    
+}
+.pop_up_body input {
+    display: block;
+    margin: 25px auto 0px auto;
+    width: 330px;
+    padding: 17px 20px;
+    background-color: #E5E5E5;
+    border-radius: 10px;
+    border: none;
+    font-weight: 500;
+    font-size: 18px;
+    color: #89909F;
+}
+.pop_up_body input:focus{
+    outline: none;
+}
+.pop_up_body .submit1{
+    cursor: pointer;
+    display: block;
+    width: 330px;
+    margin: 60px auto 0px auto;
+    padding: 20px 0px;
+    font-weight: 500;
+    font-size: 25px;
+    text-transform: uppercase;
+    border: none;
+    color: #fff;
+    border-radius: 10px;
+    background: radial-gradient(circle at center, black 0, #1C1C1C, #202020 100%);
+}
+.pop_up_close{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 21px;
+    cursor: pointer;
+}
+
+.mainQuestion{
+    background: url(../img/фон\ сайта.png) 100% 100%/100% 110% no-repeat;
+    display: none;
+    position: relative;
+}
+.main.none{
+    display: none;
+}
+
+.mainQuestion.active{
+    display: block;
+}
+h2{
+    position: absolute;
+    top: 28vh;
+    font-weight: 600;
+}
+
+.redBtn{
+    background: red;
+    display: inline-block;
+    margin: 3px;
+    border-radius: 5px;
+    font-size: 20px;
+
+}
+.orangeBtn{
+    background: orange;
+    display: inline-block;
+    margin: 3px;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+.purpleBtn{
+    background: purple;
+    display: inline-block;
+    margin: 3px;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+.blueBtn{
+    background: blue;
+    display: inline-block;
+    margin: 3px;
+    border-radius: 5px;
+    font-size: 20px;
+}
+.greenBtn{
+         background: green;
+        display: inline-block;
+        margin: 3px;
+        border-radius: 5px;
+        font-size: 20px;
+
+}
+
+.pop_up_body input[name = "radio"]{
+    display: inline-block;
+    width: 20px;
+}
+
+.red{
+    background-color: red;
+    border-radius: 5px;
+    padding: 3px;
+    font-size: 20px;
+}
+
+.orange{
+    background-color: orange;
+    border-radius: 5px;
+    padding: 3px;
+    font-size: 20px; 
+}
+
+.purple{
+    background-color: purple;
+    border-radius: 5px;
+    padding: 3px;
+    font-size: 20px;
+}
+.blue{
+    background-color: blue;
+    border-radius: 5px;
+    padding: 3px;
+    font-size: 20px;
+}
+.green{
+    background-color: green;
+    border-radius: 5px;
+    padding: 3px;
+    font-size: 20px;
 }
