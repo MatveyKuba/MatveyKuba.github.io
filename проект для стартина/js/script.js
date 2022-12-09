@@ -10,6 +10,18 @@ text.innerHTML = text.innerText.split("").map((letter, i) =>
 )
 .join(" ");
 }
+
+function text2Func(textInn){
+    const text2 = document.querySelector(".text2 p");
+    text2.innerHTML = textInn;
+    text2.innerHTML = text2.innerText.split("   ")
+
+text2.innerHTML = text2.innerText.split("").map((letter, i) =>
+`<span style="transform:rotate(${i * 19.1}deg")>${letter}</span>`
+)
+.join(" ");
+}
+
 const text2 = document.querySelector(".text2 p");
 text2.innerHTML = text2.innerText.split("   ")
 
@@ -17,6 +29,19 @@ text2.innerHTML = text2.innerText.split("").map((letter, i) =>
 `<span style="transform:rotate(${i * 8.1}deg")>${letter}</span>`
 )
 .join(" ");
+
+
+function text3Func(textInn){
+    const text3 = document.querySelector(".text3 p");
+    text3.innerHTML = textInn;
+text3.innerHTML = text3.innerText.split("   ")
+
+text3.innerHTML = text3.innerText.split("").map((letter, i) =>
+`<span style="transform:rotate(${i * 17.1}deg")>${letter}</span>`
+)
+.join(" ");
+}
+
 
 const text3 = document.querySelector(".text3 p");
 text3.innerHTML = text3.innerText.split("   ")
@@ -58,6 +83,11 @@ red.addEventListener('checked', function(){
     console.log('gg');
 })
 
+if (document.documentElement.clientWidth < 400) {
+    text3Func("Может ли он что то или");
+    text2Func("starteen starteen");
+
+}
 
 question.addEventListener('click', sayHi)
 
@@ -89,101 +119,107 @@ function sayHi(e) {
         popUp.classList.remove('open');
     })
 
+    if (document.documentElement.clientWidth > 768) {
+
+    }
 function changeWindow(value){
     popUp.classList.remove('open');
     main.classList.add('none');
     mainQuestion.classList.add('active');
     let listen = document.querySelector('.listen');
-    let nameOfCompit = document.querySelector('.nameOfCompit');
-    switch (value){
-        case "11": 
-        listen.src = "1 Белые лилии.mp3";
-        nameOfCompit.textContent = "Соло";
-        text("Cоло Соло Соло Соло Соло Соло Соло Соло Соло");
-        break;
-        case "13": 
-        listen.src = "1 Белые лилии.mp3";
-        nameOfCompit.textContent = "Дуэт";
-        text("Дуэт Дуэт Дуэт Дуэт Дуэт Дуэт Дуэт Дуэт Дуэт");
-        break;
-        case "14": 
-        listen.src = "1 Белые лилии.mp3";
-        nameOfCompit.textContent = "Команда";
-        text("Команда Команда Команда Команда Команда");
-        break;
-        case "22": 
-        listen.src = "2 Я родился.mp3";
-        nameOfCompit.textContent = "Команда";
-        text("Команда Команда Команда Команда Команда");
-        break;
-        case "23": 
-        listen.src = "2 Я родился.mp3";
-        nameOfCompit.textContent = "Соло";
-        text("Cоло Соло Соло Соло Соло Соло Соло Соло Соло");
-        break;
-        case "25": 
-        listen.src = "2 Я родился.mp3";
-        nameOfCompit.textContent = "Дуэт";
-        text("Дуэт Дуэт Дуэт Дуэт Дуэт Дуэт Дуэт Дуэт Дуэт");
-        break;
-        case "31": 
-        listen.src = "3 Стас молодец.mp3";
-        nameOfCompit.textContent = "Дуэт";
-        text("Дуэт Дуэт Дуэт Дуэт Дуэт Дуэт Дуэт Дуэт Дуэт");
-        break;
-        case "33": 
-        listen.src = "3 Стас молодец.mp3";
-        nameOfCompit.textContent = "Команда";
-        text("Команда Команда Команда Команда Команда");
-        break;
-        case "34": 
-        listen.src = "3 Стас молодец.mp3";
-        nameOfCompit.textContent = "Соло";
-        text("Cоло Соло Соло Соло Соло Соло Соло Соло Соло");
-        break;
-        case "41": 
-        listen.src = "4 Шиншила.mp3";
-        nameOfCompit.textContent = "Команда";
-        text("Команда Команда Команда Команда Команда");
-        break;
-        case "42": 
-        listen.src = "4 Шиншила.mp3";
-        nameOfCompit.textContent = "Дуэт";
-        text("Дуэт Дуэт Дуэт Дуэт Дуэт Дуэт Дуэт Дуэт Дуэт");
-        break;
-        case "45": 
-        listen.src = "4 Шиншила.mp3";
-        nameOfCompit.textContent = "Соло";
-        text("Cоло Соло Соло Соло Соло Соло Соло Соло Соло");
-        break;
-        case "52": 
-        listen.src = "5 Ночные кошмары.mp3";
-        nameOfCompit.textContent = "Соло";
-        text("Cоло Соло Соло Соло Соло Соло Соло Соло Соло");
-        break;
-        case "54": 
-        listen.src = "5 Ночные кошмары.mp3";
-        nameOfCompit.textContent = "Дуэт";
-        text("Дуэт Дуэт Дуэт Дуэт Дуэт Дуэт Дуэт Дуэт Дуэт");
-        break;
-        case "55": 
-        listen.src = "5 Ночные кошмары.mp3";
-        nameOfCompit.textContent = "Команда";
-        text("Команда Команда Команда Команда Команда");
-        break;
-        default:
-                mainQuestion.classList.remove('active');
-                this.src = "ABBA - Happy New Year (minus 18).mp3";
-                main.classList.remove('none');
-                alert('Попробуйте заново и введите корректное число')
-        break;
-
-
+    // let nameOfCompit = document.querySelector('.nameOfCompit');
+    if (document.documentElement.clientWidth > 400) {
+        switch (value){
+            case "11": 
+            listen.src = "звук.mp3";
+            // nameOfCompit.textContent = "Соло";
+            text("Cоло Соло Соло Соло Соло Соло Соло Соло Соло");
+            break;
+            case "13": 
+            listen.src = "1 Белые лилии.mp3";
+            // nameOfCompit.textContent = "Дуэт";
+            text("Дуэт Дуэт Дуэт Дуэт Дуэт Дуэт Дуэт Дуэт Дуэт");
+            break;
+            case "14": 
+            listen.src = "1 Белые лилии.mp3";
+            // nameOfCompit.textContent = "Команда";
+            text("Команда Команда Команда Команда Команда");
+            break;
+            case "22": 
+            listen.src = "2 Я родился.mp3";
+            // nameOfCompit.textContent = "Команда";
+            text("Команда Команда Команда Команда Команда");
+            break;
+            case "23": 
+            listen.src = "2 Я родился.mp3";
+            // nameOfCompit.textContent = "Соло";
+            text("Cоло Соло Соло Соло Соло Соло Соло Соло Соло");
+            break;
+            case "25": 
+            listen.src = "2 Я родился.mp3";
+            // nameOfCompit.textContent = "Дуэт";
+            text("Дуэт Дуэт Дуэт Дуэт Дуэт Дуэт Дуэт Дуэт Дуэт");
+            break;
+            case "31": 
+            listen.src = "3 Стас молодец.mp3";
+            // nameOfCompit.textContent = "Дуэт";
+            text("Дуэт Дуэт Дуэт Дуэт Дуэт Дуэт Дуэт Дуэт Дуэт");
+            break;
+            case "33": 
+            listen.src = "3 Стас молодец.mp3";
+            // nameOfCompit.textContent = "Команда";
+            text("Команда Команда Команда Команда Команда");
+            break;
+            case "34": 
+            listen.src = "3 Стас молодец.mp3";
+            // nameOfCompit.textContent = "Соло";
+            text("Cоло Соло Соло Соло Соло Соло Соло Соло Соло");
+            break;
+            case "41": 
+            listen.src = "4 Шиншила.mp3";
+            // nameOfCompit.textContent = "Команда";
+            text("Команда Команда Команда Команда Команда");
+            break;
+            case "42": 
+            listen.src = "4 Шиншила.mp3";
+            // nameOfCompit.textContent = "Дуэт";
+            text("Дуэт Дуэт Дуэт Дуэт Дуэт Дуэт Дуэт Дуэт Дуэт");
+            break;
+            case "45": 
+            listen.src = "4 Шиншила.mp3";
+            // nameOfCompit.textContent = "Соло";
+            text("Cоло Соло Соло Соло Соло Соло Соло Соло Соло");
+            break;
+            case "52": 
+            listen.src = "5 Ночные кошмары.mp3";
+            // nameOfCompit.textContent = "Соло";
+            text("Cоло Соло Соло Соло Соло Соло Соло Соло Соло");
+            break;
+            case "54": 
+            listen.src = "5 Ночные кошмары.mp3";
+            // nameOfCompit.textContent = "Дуэт";
+            text("Дуэт Дуэт Дуэт Дуэт Дуэт Дуэт Дуэт Дуэт Дуэт");
+            break;
+            case "55": 
+            listen.src = "5 Ночные кошмары.mp3";
+            // nameOfCompit.textContent = "Команда";
+            text("Команда Команда Команда Команда Команда");
+            break;
+            default:
+                    mainQuestion.classList.remove('active');
+                    this.src = "ABBA - Happy New Year (minus 18).mp3";
+                    main.classList.remove('none');
+                    alert('Попробуйте заново и введите корректное число');
+            break;
+        }
+    } else{
+        
     }
 
 }
 
 document.querySelector('.listen').addEventListener('ended', function(){
+    window.location.reload ();
     mainQuestion.classList.remove('active');
     this.src = "ABBA - Happy New Year (minus 18).mp3";
     main.classList.remove('none');

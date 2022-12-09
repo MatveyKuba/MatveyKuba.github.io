@@ -2,10 +2,12 @@
 body {
     background: url(../img/фон\ сайта.png) 100% 100%/100% 110% no-repeat;
     font-family: 'Grafita', sans-serif;
+    overflow: hidden;
 
 }
 .container{
     min-height:100vh;
+    max-width: 100vh;
 }
 @font-face {
 	font-family: 'Grafita';
@@ -28,24 +30,24 @@ body {
 
 .circleFirst{
     position: relative;/*относительное позиционирование*/
-    width: 320px;/*ширина круга*/
-    height: 320px;/*высота круга*/
+    width: 270px;/*ширина круга*/
+    height: 270px;/*высота круга*/
     border-radius: 50%;/*скругление углов*/
     background:linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
 }
 
 .circleSecond {
     position: relative; /*относительное позиционирование*/
-    width: 420px;/*ширина круга*/
-    height: 420px;/*высота круга*/
+    width: 370px;/*ширина круга*/
+    height: 370px;/*высота круга*/
     border-radius: 50%;/*скругление углов*/
     background:linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
 }
 .circleThird {
     position: relative;
     /*относительное позиционирование*/
-     width: 520px;/*ширина круга*/
-     height: 520px;/*высота круга*/
+     width: 470px;/*ширина круга*/
+     height: 470px;/*высота круга*/
      border-radius: 50%;/*скругление углов*/
      background:linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
  
@@ -54,8 +56,8 @@ body {
  .circleForth{
     position: relative;
     /*относительное позиционирование*/
-     width: 620px;/*ширина круга*/
-     height: 620px;/*высота круга*/
+     width: 570px;/*ширина круга*/
+     height: 570px;/*высота круга*/
      border-radius: 50%;/*скругление углов*/
      background:linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
  }
@@ -105,25 +107,31 @@ p span {
     transform-origin: 0 158px;/*точка исхода трансформации*/
 }   
 
+.t2 span {
+    position: absolute;/*позиция слева*/
+    font-size: 1.8em;/*размер шрифта*/
+    font-weight: 600;
+    transform-origin: 0 138px;/*точка исхода трансформации*/
+}  
 .t3 span {
     position: absolute;/*позиция слева*/
     font-size: 1.8em;/*размер шрифта*/
     font-weight: 600;
-    transform-origin: 0 208px;/*точка исхода трансформации*/
+    transform-origin: 0 188px;/*точка исхода трансформации*/
 }  
 
 .t4 span {
     position: absolute;/*позиция слева*/
     font-size: 1.8em;/*размер шрифта*/
     font-weight: 600;
-    transform-origin: 0 258px;/*точка исхода трансформации*/
+    transform-origin: 0 238px;/*точка исхода трансформации*/
 }
 
 .t5 span {
     position: absolute;/*позиция слева*/
     font-size: 1.8em;/*размер шрифта*/
     font-weight: 600;
-    transform-origin: 0 308px;/*точка исхода трансформации*/
+    transform-origin: 0 288px;/*точка исхода трансформации*/
 }
 @keyframes animate {
     0%
@@ -164,12 +172,12 @@ svg {
     position: absolute;
     top: 40px;
     right: 45px;
-    font-size: 164px;
+    font-size: 134px;
     color: white;
     font-family: 'Inter', 'Arial Narrow', Arial, sans-serif;
-    border-radius: 120px;
-    width: 230px;
-    height: 230px;
+    border-radius: 90px;
+    width: 180px;
+    height: 180px;
     background: radial-gradient(circle at center, black 0, #1C1C1C, #202020 100%);
     cursor: pointer;
     z-index: 1000;
@@ -342,4 +350,141 @@ h2{
     border-radius: 5px;
     padding: 3px;
     font-size: 20px;
+}
+
+@media(max-width:900px){
+
+    p span {
+        position: absolute;
+        left: 50%;/*позиция слева*/
+        transform-origin: 0 158px;/*точка исхода трансформации*/
+    }   
+    
+    .t2 span {
+        position: absolute;/*позиция слева*/
+        transform-origin: 0 138px;/*точка исхода трансформации*/
+    }  
+    .t3 span {
+        position: absolute;/*позиция слева*/
+        transform-origin: 0 188px;/*точка исхода трансформации*/
+    }  
+    
+    .t4 span {
+        position: absolute;/*позиция слева*/
+        transform-origin: 0 238px;/*точка исхода трансформации*/
+    }
+    
+    .t5 span {
+        position: absolute;/*позиция слева*/
+        transform-origin: 0 288px;/*точка исхода трансформации*/
+    }
+
+    .circle {
+        position: relative;/*относительное позиционирование*/
+        width: 320px;/*ширина круга*/
+        height: 320px;/*высота круга*/
+    
+    }
+    
+    
+    .circleFirst{
+        position: relative;/*относительное позиционирование*/
+        width: 270px;/*ширина круга*/
+        height: 270px;/*высота круга*/
+    }
+    
+    .circleSecond {
+        position: relative; /*относительное позиционирование*/
+        width: 370px;/*ширина круга*/
+        height: 370px;/*высота круга*/  
+    }
+    .circleThird {
+        position: relative;
+        /*относительное позиционирование*/
+         width: 470px;/*ширина круга*/
+         height: 470px;/*высота круга*/
+     }
+    
+     .circleForth{
+        position: relative;
+        /*относительное позиционирование*/
+         width: 570px;/*ширина круга*/
+         height: 570px;/*высота круга*/
+     }
+}
+
+@media(max-width:400px){
+    body{
+        overflow-x: hidden;
+    }
+    p span {
+        position: absolute;
+        left: 50%;/*позиция слева*/
+        transform-origin: 0 158px;/*точка исхода трансформации*/
+    }   
+    
+    .t2 span {
+        position: absolute;/*позиция слева*/
+        transform-origin: 0 74px;/*точка исхода трансформации*/
+    }  
+    .t3 span {
+        position: absolute;/*позиция слева*/
+        transform-origin: 0 98px;/*точка исхода трансформации*/
+    }  
+    
+    .t4 span {
+        position: absolute;/*позиция слева*/
+        transform-origin: 0 138px;/*точка исхода трансформации*/
+    }
+    
+    .t5 span {
+        position: absolute;/*позиция слева*/
+        transform-origin: 0 168px;/*точка исхода трансформации*/
+    }
+
+    .circle {
+        position: relative;/*относительное позиционирование*/
+        width: 120px;/*ширина круга*/
+        height: 120px;/*высота круга*/
+    
+    }
+    
+    .circleFirst{
+        position: relative;/*относительное позиционирование*/
+        width: 145px;/*ширина круга*/
+        height: 145px;/*высота круга*/
+    }
+    
+    .circleSecond {
+        position: relative; /*относительное позиционирование*/
+        width: 190px;/*ширина круга*/
+        height: 190px;/*высота круга*/  
+    }
+    .circleThird {
+        position: relative;
+        /*относительное позиционирование*/
+         width: 270px;/*ширина круга*/
+         height: 270px;/*высота круга*/
+     }
+    
+     .circleForth{
+        position: relative;
+        /*относительное позиционирование*/
+         width: 340px;/*ширина круга*/
+         height: 340px;/*высота круга*/
+     }
+     .question{
+        position: absolute;
+        top: 33px;
+        right: 32px;
+        font-size: 52px;
+        color: white;
+        font-family: 'Inter', 'Arial Narrow', Arial, sans-serif;
+        border-radius: 50px;
+        width: 80px;
+        height: 80px;
+        background: radial-gradient(circle at center, black 0, #1C1C1C, #202020 100%);
+        cursor: pointer;
+        z-index: 1000;
+      }
 }
