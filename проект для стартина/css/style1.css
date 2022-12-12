@@ -1,22 +1,141 @@
-
 body {
-    background: url(../img/фон\ сайта.png) 100% 100%/100% 110% no-repeat;
-    font-family: 'Grafita', sans-serif;
-    overflow: hidden;
+    background: url(../img/фон\ сайта.png) 100% 100%/100% 110% fixed;
+    font-family: 'GG', sans-serif;
+    /* overflow: hidden; */
 
 }
+
+@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed);
+
+* {
+  box-sizing: border-box;
+
+}
+
+body {
+  text-align: center;
+}
+
+.preloader {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, rgba(141,146,129,1) 0%, rgba(122,221,223,1) 0%, rgba(141,146,129,1) 100%);
+    z-index: 1200;
+  }
+.loader {
+  position: absolute;
+  margin: auto;
+  width: 400px;
+  top: 44%;
+  left: 40%;
+  color: white;
+  font-family: "GG", sans-serif;
+  font-size: 250%;
+  background: linear-gradient(90deg, rgba(141,146,129,1) 0%, rgba(122,221,223,1) 0%, rgba(141,146,129,1) 100%);
+  box-shadow: inset 0 5px 20px black;
+  text-shadow: 5px 5px 25px rgba(0,0,0,0.3);
+  z-index: 1400;
+  border-radius: 5px;
+}
+
+.loader:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.load {
+  float: left;
+  height: 100px;
+  line-height: 120px;
+  width: 50px;
+  font-family: 'Grafita', 'GG', sans-serif;
+}
+
+.loader > .load {
+  border-left: 1px solid #444;
+  border-right: 1px solid #222;
+}
+
+.covers {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.covers .load {
+  background: linear-gradient(180deg, rgba(141,146,129,1) 0%, rgba(122,221,223,1) 0%, rgba(255,255,255,1) 100%);
+  animation: up 2s infinite;
+}
+
+
+.loaded_hiding .preloader {
+    transition: 2.3s opacity;
+    opacity: 0;
+    /* animation: time 4s ease; */
+}
+  
+  .loaded .preloader {
+    display: none;
+ }
+
+@keyframes up {
+  0%   { margin-bottom: 0; }
+  16%  { margin-bottom: 100%; height: 20px; }
+  50% { margin-bottom: 0; }
+  100% { margin-bottom: 0; }
+}
+
+/* @keyframes time {
+    0%{
+        opacity: 1;
+    }
+    25%{
+        opacity: 0.75;
+    }
+    50%{
+        opacity: 0.5;
+    }
+    100%{
+        opacity: 0;
+    }
+    
+} */
+
+.covers span:nth-child(2) { animation-delay: .142857s; }
+.covers span:nth-child(3) { animation-delay: .285714s; }
+.covers span:nth-child(4) { animation-delay: .428571s; }
+.covers span:nth-child(5) { animation-delay: .571428s; }
+.covers span:nth-child(6) { animation-delay: .714285s; }
+.covers span:nth-child(7) { animation-delay: .857142s; }
+.covers span:nth-child(8) { animation-delay: .957142s; }
+
 .container{
     min-height:100vh;
     max-width: 100vh;
 }
 @font-face {
-	font-family: 'Grafita';
-	src: url('../fonts/Grafita\ Special\ DEMO.otf');
-	
+	font-family: 'Wow Games Sans';
+	src: url('../fonts/Wow\ Games\ Sans.ttf');
+}
+
+@font-face {
+    font-family: 'GG';
+    src: url('../fonts/FairfaxHD.ttf');
+    font-weight: 300;
 }
 :root { font-family: 'Inter', sans-serif; }
 @supports (font-variation-settings: normal) {
   :root { font-family: 'Inter var', sans-serif; }
+}
+@font-face {
+    font-family: 'Grafita';
+    src: url(../fonts/Grafita\ Special\ DEMO.otf);
 }
 .circle {
     position: relative;/*относительное позиционирование*/
@@ -24,9 +143,15 @@ body {
     height: 320px;/*высота круга*/
     border-radius: 50%;/*скругление углов*/
     background:linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+    animation: rotateIn; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 3s;
 
 }
 
+#svg{
+    width: 40px;
+    height: 40px;
+}
 
 .circleFirst{
     position: relative;/*относительное позиционирование*/
@@ -131,7 +256,7 @@ p span {
     position: absolute;/*позиция слева*/
     font-size: 1.8em;/*размер шрифта*/
     font-weight: 600;
-    transform-origin: 0 288px;/*точка исхода трансформации*/
+    transform-origin: 0 285px;/*точка исхода трансформации*/
 }
 @keyframes animate {
     0%
@@ -172,7 +297,7 @@ svg {
     position: absolute;
     top: 40px;
     right: 45px;
-    font-size: 134px;
+    font-size: 136px;
     color: white;
     font-family: 'Inter', 'Arial Narrow', Arial, sans-serif;
     border-radius: 90px;
@@ -181,8 +306,19 @@ svg {
     background: radial-gradient(circle at center, black 0, #1C1C1C, #202020 100%);
     cursor: pointer;
     z-index: 1000;
+    -webkit-animation: shadow 1s infinite ease alternate;
+    -o-animation: shadow 1s infinite ease alternate;
+    animation: shadow 1s infinite ease alternate;   
   }
 
+  @keyframes shadow {
+    from{
+        box-shadow: 0px 0px 0px;
+    }
+    to {
+        box-shadow: black 4px 0px 50px;
+    }
+}
   .pop_up{
     
     width: 100%;
@@ -257,7 +393,7 @@ svg {
 }
 
 .mainQuestion{
-    background: url(../img/фон\ сайта.png) 100% 100%/100% 110% no-repeat;
+    /* background: url(../img/фон\ сайта.png) 100% 100%/100% 110% no-repeat; */
     display: none;
     position: relative;
 }
@@ -268,92 +404,69 @@ svg {
 .mainQuestion.active{
     display: block;
 }
+
+
 h2{
     position: absolute;
     top: 28vh;
     font-weight: 600;
 }
-
-.redBtn{
-    background: red;
-    display: inline-block;
-    margin: 3px;
-    border-radius: 5px;
-    font-size: 20px;
-
-}
-.orangeBtn{
-    background: orange;
-    display: inline-block;
-    margin: 3px;
-    border-radius: 5px;
-    font-size: 20px;
-}
-
-.purpleBtn{
-    background: purple;
-    display: inline-block;
-    margin: 3px;
-    border-radius: 5px;
-    font-size: 20px;
-}
-
-.blueBtn{
-    background: blue;
-    display: inline-block;
-    margin: 3px;
-    border-radius: 5px;
-    font-size: 20px;
-}
-.greenBtn{
-         background: green;
-        display: inline-block;
-        margin: 3px;
-        border-radius: 5px;
-        font-size: 20px;
+.h2{
+    margin-top: -130px;
+    font-weight: 600;
 
 }
 
-.pop_up_body input[name = "radio"]{
+
+
+.pop_up_body input[type = "radio"]{
     display: inline-block;
     width: 20px;
 }
 
 .red{
-    background-color: red;
+    /* background-color: red; */
     border-radius: 5px;
     padding: 3px;
     font-size: 20px;
 }
 
 .orange{
-    background-color: orange;
+    /* background-color: orange; */
     border-radius: 5px;
     padding: 3px;
     font-size: 20px; 
 }
 
 .purple{
-    background-color: purple;
+    /* background-color: purple; */
     border-radius: 5px;
     padding: 3px;
     font-size: 20px;
 }
 .blue{
-    background-color: blue;
+    /* background-color: blue; */
     border-radius: 5px;
     padding: 3px;
     font-size: 20px;
 }
+/* #blue{
+    margin-left: 53px;
+} */
 .green{
-    background-color: green;
+    /* background-color: green; */
     border-radius: 5px;
     padding: 3px;
     font-size: 20px;
 }
 
 @media(max-width:900px){
-
+    .h2{
+        margin-top: -175px;
+        text-decoration: underline;
+        background: linear-gradient(86.66deg, rgba(255, 255, 255, 0) 2.54%, #FFFFFF 95.03%);
+        border-radius: 10px;
+    }
     p span {
         position: absolute;
         left: 50%;/*позиция слева*/
@@ -383,6 +496,7 @@ h2{
         position: relative;/*относительное позиционирование*/
         width: 320px;/*ширина круга*/
         height: 320px;/*высота круга*/
+   
     
     }
     
@@ -413,9 +527,41 @@ h2{
      }
 }
 
-@media(max-width:400px){
+@media(max-width:450px) and (max-height: 900px){
+    .loader{
+        left: 0%;
+        width: 376px;
+    }
+    .load{
+        width: 47px;
+    }
+    .mainQuestion.active{
+        background: none;
+    }
+    .pop_up_body{
+        margin: auto;
+        width: 380px;
+        background-color: #fff;
+        border-radius: 10px;
+        text-align: center;
+        padding: 10px 15px 10px 15px;
+        position: relative;
+        font-size:18px;
+        
+    }
+    .pop_up_body input[type = "radio"]{
+        width:10px;
+        transform: scale(0.8);
+    }
+    #blue{
+    margin-left: 0px;
+    margin-right: 0px;
+    }
+    .blue{
+        margin-right: 10px;
+    }
     body{
-        overflow-x: hidden;
+        background: url(../img/фон\ моб\ сайта.png) 100% 100%/100% 110% fixed;
     }
     p span {
         position: absolute;
@@ -425,11 +571,11 @@ h2{
     
     .t2 span {
         position: absolute;/*позиция слева*/
-        transform-origin: 0 74px;/*точка исхода трансформации*/
+        transform-origin: 0 73px;/*точка исхода трансформации*/
     }  
     .t3 span {
         position: absolute;/*позиция слева*/
-        transform-origin: 0 98px;/*точка исхода трансформации*/
+        transform-origin: 0 105px;/*точка исхода трансформации*/
     }  
     
     .t4 span {
@@ -444,8 +590,11 @@ h2{
 
     .circle {
         position: relative;/*относительное позиционирование*/
-        width: 120px;/*ширина круга*/
-        height: 120px;/*высота круга*/
+        width: 320px;/*ширина круга*/
+        height: 320px;/*высота круга*/
+        margin-left: 30px;
+        animation: rotateIn; /* referring directly to the animation's @keyframe declaration */
+        animation-duration: 3s;
     
     }
     
@@ -457,8 +606,8 @@ h2{
     
     .circleSecond {
         position: relative; /*относительное позиционирование*/
-        width: 190px;/*ширина круга*/
-        height: 190px;/*высота круга*/  
+        width: 205px;/*ширина круга*/
+        height: 205px;/*высота круга*/  
     }
     .circleThird {
         position: relative;
@@ -487,4 +636,62 @@ h2{
         cursor: pointer;
         z-index: 1000;
       }
+      .mainQuestion{
+        background: url(../img/фон\ моб\ сайта.png) 100% 100%/100% 100% no-repeat;
+        display: none;
+        position: relative;
+    }
+    .h2{
+        margin-top: 350px;
+        background: linear-gradient(86.66deg, rgba(255, 255, 255, 0) 2.54%, #FFFFFF 95.03%);
+        border-radius: 10px;
+    }
+    
 }
+.AllSounds{
+    font-family: 'Wow Games Sans', sans-serif;
+    background: none;
+    margin-top: 40px;
+    padding: 60px;
+    background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+    border-radius: 15px;
+}
+.AllSounds h3{
+    font-weight: 600;
+}
+.AllSounds .container{
+    max-height: 600px;
+}
+
+.AllSounds audio::-webkit-media-controls-panel {
+    background-color: radial-gradient(circle at center, black 0, #1C1C1C, #202020 100%);
+}
+  
+.AllSounds audio::-webkit-media-controls-timeline {
+    background-color: #B1D4E0;
+    border-radius: 25px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+.spoiler-title{
+    cursor: pointer;
+}
+
+.spoiler-title:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+.spoiler-body{
+    margin-top: 5px;
+display:none;
+background:#f1f1f1;
+font-size: 16px;
+}
+b{
+    margin-left: 15px;
+    display: flex!important;
+}
+
+
+
