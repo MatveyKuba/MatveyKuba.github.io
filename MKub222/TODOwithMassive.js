@@ -24,9 +24,11 @@ subTask.addEventListener('click', function(){
    
     event.preventDefault();
     
-    addTask(inpTask.value,priorities.HIGH);
+    // addTask(inpTask.value,priorities.HIGH);
+    let tasks = new Add(inpTask.value);
+    tasks.addT();
     render();
-    console.log(list)
+    console.log(list);
 })
 
     
@@ -34,7 +36,9 @@ subTask.addEventListener('click', function(){
 subLowTask.addEventListener('click', function(){
     event.preventDefault();
 
-    addTask(inpLowTask.value,priorities.LOW);
+    // addTask(inpLowTask.value,priorities.LOW);
+    let tasks = new Add(inpLowTask.value);
+    tasks.addT();
     render();    
     console.log(list);
 })
@@ -43,14 +47,31 @@ subLowTask.addEventListener('click', function(){
 function render(){
     impTask.textContent="";
     lowTask.textContent="";
+ 
+    function arrayForOf(array, i = 0) {
+        if (i === array.length) {
+          return;
+        } else if(array[i].priority == priorities.HIGH) {
+          addHigh(array[i].name);
+          i++;
+          arrayForOf(array, i);
+          return array;
+        }   else {
+            addLow(array[i].name)
+            i++;
+            arrayForOf(array,i);
+            return array;
+        }
+      }
+      arrayForOf(list);
 
-    for (let item of list) {
-	if (item.priority == priorities.HIGH) {
-		addHigh(item.name);
-	} else if (item.priority == priorities.LOW) {
-		addLow(item.name);
-	}
-}
+//     for (let item of list) {
+// 	if (item.priority == priorities.HIGH) {
+// 		addHigh(item.name);
+// 	} else if (item.priority == priorities.LOW) {
+// 		addLow(item.name);
+// 	}
+// }
 
 }
 function addHigh(task){
@@ -168,17 +189,38 @@ function deleteTask(name){
     }).indexOf(name);
     list.splice(obj, 1);
 }
-function addTask(newTask, prior){
-    newTask ={
-        name : newTask,
-        status: 'To Do:',
-        priority: prior,
+// function addTask(newTask, prior){
+//     newTask ={
+//         name : newTask,
+//         status: 'To Do:',
+//         priority: prior,
+//     }
+//     if(!newTask) {
+//         console.log('Введите задачу');
+//     }
+//     list.push(newTask);
+// }
+
+function Add(task){
+    this.name = task;
+    if(this.name === inpTask.value){
+        this.priority = priorities.HIGH;
     }
-    if(!newTask) {
-        console.log('Введите задачу');
+    if (this.name === inpLowTask.value) {
+        this.priority = priorities.LOW;
     }
-    list.push(newTask);
+    this.status = statuses.TODO;
+    this.addT = function(){
+        list.push(this);
+    }   
 }
+
+
+
+
+
+
+
 
 // let keys = {
 //     item1:"",
