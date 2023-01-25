@@ -1,0 +1,60 @@
+.chat{
+    justify-content: center;
+    align-items: center;
+    
+    margin: 10% 45%;
+    width: 320px;
+    height: 433px;
+    padding: 15px;
+    border: 2px solid black;
+    position: relative;
+}
+
+.chatBody{
+    border: 1px solid grey;
+    margin-top: 10px;
+}
+.settingsButton{
+    width: 82px;
+    height: 19px;
+    border: 1px solid black;
+}
+
+.exitButton{
+    border: 1px solid black;
+    width: 50px;
+    height: 19px;
+    margin-left: 182px;
+}
+
+li{
+    list-style: none;
+    background-color: #E5E5E5;
+    margin-bottom: 5px;
+    width: 50%;
+    
+}
+
+li:nth-child(2n) {
+    background: green;
+    margin-left: 50%;
+  }
+
+ul{
+    padding: 0;
+}
+input{
+    width: 267px;
+    position: absolute;
+    bottom: 10px;
+
+}
+
+.send{
+    position: absolute;
+    bottom: 10px;
+    right: 15px;
+}
+
+
+
