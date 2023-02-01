@@ -1,0 +1,193 @@
+.chat{
+    justify-content: center;
+    align-items: center;
+
+    margin: 10% 40%;
+    width: 320px;
+    height: 433px;
+    padding: 15px;
+    border: 2px solid black;
+    position: relative;
+}
+
+.chatBody{
+    border: 1px solid grey;
+    margin-top: 10px;
+    height: 390px;
+    overflow-y: scroll;
+}
+
+.settingsButton{
+    width: 82px;
+    height: 19px;
+    border: 1px solid black;
+}
+
+.alreadyHasCode{
+    position: absolute;
+    right: 25px;
+    bottom: 50px;
+    border: 1px solid black;
+}
+
+.exitButton{
+    border: 1px solid black;
+    width: 50px;
+    height: 19px;
+    margin-left: 182px;
+}
+
+.Mes{
+    list-style: none;
+    background-color: #E5E5E5;
+    margin-bottom: 5px;
+    width: 50%;
+    margin-left: 50%;
+}
+.Mes2{
+    list-style: none;
+    background-color: #e5e5e541;
+    margin-bottom: 5px;
+    width: 50%;
+    margin-right: 50%;
+}
+
+/* .Mes:nth-child(2n) {
+    background: green;
+    margin-left: 50%;
+  } */
+
+ul{
+    padding: 0;
+}
+.message{
+    width: 267px;
+    position: absolute;
+    bottom: 10px;
+
+}
+
+.send{
+    position: absolute;
+    bottom: 10px;
+    right: 15px;
+}
+
+.pop_up{
+    
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: transparent;
+    z-index: 3000;
+    transform: translateY(-24.5%) scale(0);
+    transition: .4s ease-in-out
+}
+.pop_up.open {
+    transform: translateY(0%) scale(100%);
+    background-color: rgba(0, 0, 0, .8);
+}
+.pop_up_container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+.pop_up_body{
+    margin: auto;
+    width: 273px;
+    height: 319px;
+    background-color: #fff;
+    border-radius: 10px;
+
+    /* padding: 100px 15px 110px 15px; */
+    position: relative;
+}
+.pop_up_body{
+    color: black;
+    
+}
+.pop_up_body p{
+    padding-left: 10px;
+    padding-top: 10px;
+}
+.nameInput{
+    width: 207px;
+    position: absolute;
+    left: 10px;
+    border: 1px solid black;
+}
+.changeNameButton{
+    position: absolute;
+    right: 45px;
+    border: 1px solid black;
+}
+
+.pop_up_body input:focus{
+    outline: none;
+}
+
+.pop_up_close{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 21px;
+    cursor: pointer;
+}
+
+
+.pop_upSignIn.open{
+    transform: translateY(0%) scale(100%);
+    background-color: rgba(0, 0, 0, .8);
+}
+
+.pop_upSignIn{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: transparent;
+    z-index: 3000;
+    transform: translateY(-24.5%) scale(0);
+    transition: .4s ease-in-out
+}
+.emailInput, .codeInput{
+    width: 207px;
+    position: absolute;
+    left: 10px;
+    border: 1px solid black;
+}
+
+.getCodeButton, .EnterButton{
+    position: absolute;
+    right: 25px;
+    border: 1px solid black;
+}
+
+.pop_up_closeSignIn, .pop_up_closeCodePopUp{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 21px;
+    cursor: pointer;
+}
+
+
+.pop_upEnterCode{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: transparent;
+    z-index: 3000;
+    transform: translateY(-24.5%) scale(0);
+    transition: .4s ease-in-out
+}
+
+.pop_upEnterCode.open{
+    transform: translateY(0%) scale(100%);
+    background-color: rgba(0, 0, 0, .8);
+}

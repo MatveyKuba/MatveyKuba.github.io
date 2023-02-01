@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="pop_up" id="pop_up">
+        <div class="pop_up_container">
+            <div class="pop_up_body" id="pop_up_body">
+                <p>Настройки</p>
+                <p>Имя в чате</p>
+                    <input class="nameInput" type="name" name="pop_name" required placeholder="Имя">
+                    <button class="changeNameButton" type="submit" name="submit1">-></button>
+
+                <div class="pop_up_close" id="pop_up_close">&#10006</div>
+            </div>
+        </div>
+    </div>
+    <div class="pop_upSignIn" id="pop_up">
+        <div class="pop_up_container">
+            <div class="pop_up_body" id="pop_up_body">
+                <p>Авторизация</p>
+                <p>Почта</p>
+                    <input class="emailInput" type="email" name="pop_name" required placeholder="Почта">
+                    <button class="getCodeButton" type="submit" name="submit1">Получить код</button>
+                    <button class="alreadyHasCode" type="submit">Ввести код</button>
+
+                <div class="pop_up_closeSignIn" id="pop_up_close">&#10006</div>
+            </div>
+        </div>
+    </div>
+    <div class="pop_upEnterCode" id="pop_up">
+        <div class="pop_up_container">
+            <div class="pop_up_body" id="pop_up_body">
+                <p>Подтверждение</p>
+                <p>Код:</p>
+                    <input class="codeInput" type="text" name="pop_name" required placeholder="Код">
+                    <button class="EnterButton" type="submit" name="submit1">Войти</button>
+
+                <div class="pop_up_closeCodePopUp" id="pop_up_close">&#10006</div>
+            </div>
+        </div>
+    </div>
+    <div class="chat">
+        <button class="settingsButton">Настройки</button>
+        <button class="exitButton">Выйти</button>
+        <div class="chatBody">
+            <ul class="chatMessages">
+                
+            </ul>
+        </div>
+        <form class="form" action="">
+        <input class="message" type="text" placeholder="сообщение">
+        <button  class="send" type="submit">-></button>
+        </form>
+    </div>
+    <template id="tmpl">
+
+        <li class="Mes"></li>
+        <li class="Mes2"></li>
+    </template>
+
+</body>
+<script type="module" src="index.js"></script>
+</html>
