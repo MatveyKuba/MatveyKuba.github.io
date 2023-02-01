@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Это моё начало... ">
+    <meta name="author" content="Matvey">
+    <meta name="robots" content="all">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta property="og:title" content="This is my world">
+    <title>Матвей Кубланов - веб-начинающий</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/animate.min.css"/>
+     <link
+      rel="stylesheet"
+      href="js/swiper-bundle.min.css"
+    />
+    <link  href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
+</head>
+<body>
+  <div class="preloader">
+  <div class="preloader__row">
+    <div class="preloader__item"></div>
+    <div class="preloader__item"></div>
+    <div class="preloader__item"></div>
+  </div>
+  </div>
+   
+    <header>
+        <nav>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xxl-2 col-lg-3 col-8">
+                        <div class="logo">LOUDER</div>
+                    </div>
+                    <div class="col-xxl-6 col-xl-7 col-lg-8 offset-xxl-4 offset-xl-2 offset-lg-6 offset-md-6 d-none d-lg-block">
+                        <div class="menu">
+                            <ul>
+                                <li><a href="#aboutLouder">О LOUDER</a></li>
+                                <li><a href="#participants">Kings&Queens</a></li>
+                                <li><a href="#vote">Проголосовать</a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-4 d-flex d-lg-none flex-column justify-content-center align-items-end">
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Навигация
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#aboutLouder">О LOUDER</a></li>
+                                <li><a class="dropdown-item" href="#participants">Kings&Queens</a></li>
+                                <li><a class="dropdown-item" href="#vote">Проголосовать</a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header> 
+<main>
+  
+   <div class="pop_up" id="pop_up">
+       <div class="pop_up_container">
+           <div class="pop_up_body" id="pop_up_body">
+               <p>Оставить заявку, чтобы я смог с тобой связаться!</p>
+               <form action="php/mail1.php" id="pop_ups" method="post">
+                   <input type="name" name="pop_name" required placeholder="Имя">
+                   <input type="phone" name="pop_phone" required id="phone_number" placeholder="Телефон">
+                   <button type="submit" name="submit1" value="Оставить заявку">Оставить заявку</button>
+               </form>
+               <div class="pop_up_close" id="pop_up_close">&#10006</div>
+           </div>
+       </div>
+   </div>
+   
+   <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+         <section class="main" class="section h-100">
+          <div class="container h-100">
+              <div class="row align-items-center h-100">
+                  <div class="col-lg-12">
+                      <div class="title__container">
+                          <h1 class="hi">Добро пожаловать на<br>LOUDER</h1>
+                          <div class="hi2">
+                          <h4>Уже не просто бал...</h4>
+                          <a href="#participants"><input type="button" value="Kings&Queens"></a>
+                          <a href="#vote"><input type="button" value="Проголосовать"></a>
+                        </div>
+                      </div>
+                      
+                    
+                  </div>
+              </div>
+          </div>
+  
+      </section>
+       </div>
+        <div class="swiper-slide">
+         <section class="main3" class="section h-100">
+          <div class="container h-100">
+              <div class="row d-flex flex-row-reverse align-items-center h-100">
+                  <div class="col-lg-6  ">
+                      <div class="title__container3 float-lg-right ">
+                          <h1 class="hi3">Я - веб разработчик</h1>
+                          <h4><i class="fa fa-html5" aria-hidden="true"></i> Освоил и осваиваю HTML, CSS, JS, Jquery </h4>
+                         <a href="#contactsItems"><input type="button" value="Заказать сайт"></a>
+                         <!--  <a href="#myCases"><input type="button" value="Мои работы"></a>-->
+                      </div>
+                      
+                    
+                  </div>
+              </div>
+          </div>
+  
+      </section>
+       </div>
+        <div class="swiper-slide">
+         <section class="main4" class="section h-100">
+          <div class="container h-100">
+              <div class="row align-items-center h-100">
+                  <div class="col-lg-6">
+                      <div class="title__container4">
+                          <h1 class="hi4">И веб-дизайнер</h1>
+                          <h4><i class="fa fa-file-image-o" aria-hidden="true"></i> Обожаю эксперементировать в дизайне каждого сайта</h4>
+                          <a href="#myCases"><input type="button" value="Посмотреть кейсы"></a>
+                         <!-- <a href="#myCases"><input type="button" value="Мои работы"></a>-->
+                      </div>
+                      
+                    
+                  </div>
+              </div>
+          </div>
+  
+      </section>
+      </div>
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
+    </div>
+
+ 
+  <section class="main2" class="section h-100">
+        <div class="container h-100">
+            <div class="row align-items-center h-100">
+                <div class="col-lg-6">
+                    <div class="title__container">
+                        <h1 class="hi2">Добро пожаловать на <br>LOUDER</h1>
+                        <h4><i class="fa fa-user-circle" aria-hidden="true"></i> Просто начинающий веб-дизайнер с большим будущим</h4>
+                        <a href="#aboutMe"><input type="button" value="Обо мне"></a>
+                        <a href="#myCases"><input type="button" value="Мои работы"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+  
+  
+    
+    <section class="about_me section" id="aboutLouder">
+
+        <div class="about_me_container container">
+            <div class="row">
+                <div class="col-12 col-sm-6 col-md-3">
+                    <h2>О LOUDER</h2>
+                </div>
+            </div>
+
+            <img class="badQ mx-auto" src="img/goodQ.jpg" data-src="img/img.jpg" alt="Здесь есть моё фото)">
+            <div class="row">
+                <div class=" textContain col-12 col-sm-10 col-md-9 col-lg-8">
+                    <p class="textFirst">Именно так называется событие, которое точно останется в вашей памяти, позволит погрузиться в атмосферу танца и провести вечер незабываемо! </br>
+                    Тебя ждёт много интересного: зажигательная вечеринка, яркие стильные наряды, конкурсы, круто проведенное время и многое другое.
+                    </br>Готов выйти за рамки шаблонов? Тогда мы ждём тебя!
+                       </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="bg">
+        
+    </section>
+   <section class="skills section" id="participants">
+       <div class="skills_container container">
+           <div class="skill_container">
+               <h2>Чем я смогу вас удивить?</h2>
+               <div class="row">
+                   <div class="skills_item">
+                      <img src="img/3kh4.png" alt="">
+                       <p class="col-10 offset-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis adipisci laborum inventore reiciendis asperiores incidunt ipsum ea distinctio quae enim nam, a, nisi, molestias ducimus magnam hic molestiae odio qui earum quibusdam ipsa exercitationem ipsam nostrum! Corporis quos quidem iusto, molestiae, quo non nemo temporibus fugiat delectus corrupti perferendis illum nesciunt unde. Ab ipsam, repellendus non blanditiis asperiores tenetur minus officia optio perspiciatis quas explicabo quia, quos ad numquam veniam incidunt consequuntur molestias, ea eum dolorem perferendis possimus. Labore quod minus, culpa quaerat consectetur dolores tenetur similique magnam voluptates sequi ratione officia! Delectus deserunt quas, necessitatibus debitis eum dolorum laudantium?</p>
+                   </div>
+                </div>
+                <div class="row">
+                   <div class="skills_item">
+                    <img src="img/3kh4.png" alt="">
+                    <p class="col-10 offset-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis adipisci laborum inventore reiciendis asperiores incidunt ipsum ea distinctio quae enim nam, a, nisi, molestias ducimus magnam hic molestiae odio qui earum quibusdam ipsa exercitationem ipsam nostrum! Corporis quos quidem iusto, molestiae, quo non nemo temporibus fugiat delectus corrupti perferendis illum nesciunt unde. Ab ipsam, repellendus non blanditiis asperiores tenetur minus officia optio perspiciatis quas explicabo quia, quos ad numquam veniam incidunt consequuntur molestias, ea eum dolorem perferendis possimus. Labore quod minus, culpa quaerat consectetur dolores tenetur similique magnam voluptates sequi ratione officia! Delectus deserunt quas, necessitatibus debitis eum dolorum laudantium?</p>
+                   </div>
+                </div>
+                <div class="row">
+                   <div class="skills_item">
+                    <img src="img/3kh4.png" alt="">
+                    <p class="col-10 offset-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis adipisci laborum inventore reiciendis asperiores incidunt ipsum ea distinctio quae enim nam, a, nisi, molestias ducimus magnam hic molestiae odio qui earum quibusdam ipsa exercitationem ipsam nostrum! Corporis quos quidem iusto, molestiae, quo non nemo temporibus fugiat delectus corrupti perferendis illum nesciunt unde. Ab ipsam, repellendus non blanditiis asperiores tenetur minus officia optio perspiciatis quas explicabo quia, quos ad numquam veniam incidunt consequuntur molestias, ea eum dolorem perferendis possimus. Labore quod minus, culpa quaerat consectetur dolores tenetur similique magnam voluptates sequi ratione officia! Delectus deserunt quas, necessitatibus debitis eum dolorum laudantium?</p>
+                   </div>
+                </div>
+                <div class="row">
+                   <div class="skills_item">
+                    <img src="img/3kh4.png" alt="">
+                    <p class="col-10 offset-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis adipisci laborum inventore reiciendis asperiores incidunt ipsum ea distinctio quae enim nam, a, nisi, molestias ducimus magnam hic molestiae odio qui earum quibusdam ipsa exercitationem ipsam nostrum! Corporis quos quidem iusto, molestiae, quo non nemo temporibus fugiat delectus corrupti perferendis illum nesciunt unde. Ab ipsam, repellendus non blanditiis asperiores tenetur minus officia optio perspiciatis quas explicabo quia, quos ad numquam veniam incidunt consequuntur molestias, ea eum dolorem perferendis possimus. Labore quod minus, culpa quaerat consectetur dolores tenetur similique magnam voluptates sequi ratione officia! Delectus deserunt quas, necessitatibus debitis eum dolorum laudantium?</p>
+                   </div>
+                </div>
+               <div class="row justify-content-center">
+             
+         <div class="fotorama d-lg-none d-md-none" data-autoplay="true" data-autoplay="3000" data-transition="slide" data-clicktransition="crossfade">
+
+             <div class="skills_ItemM text-center ">
+                 <i class="fa fa-2x fa-desktop" aria-hidden="true"></i>
+                 <h3>Веб-разработка сайтов (совсем чуть-чуть)</h3>
+                 <p>Всегда хотел освоить эту нишу, именно поэтому пошёл на этот курс</p>
+             </div>
+             <div class="skills_ItemM text-center ">
+                 <i class="fa fa-2x fa-language" aria-hidden="true"></i>
+                 <h3>Английский язык - почти как родной</h3>
+                 <p>С детства учил английский язык и могу даже сказать Hello</p>
+             </div>
+             <div class="skills_ItemM  text-center">
+                 <i class="fa fa-2x fa-user-o" aria-hidden="true"></i>
+                 <h3>Психолог онлайн</h3>
+                 <p>Лучшей поддержки вы не найдете</p>
+             </div>
+             <div class="skills_ItemM  text-center">
+                 <i class="fa fa-2x fa-bar-chart" aria-hidden="true"></i>
+                 <h3>Экономический прогноз</h3>
+                 <p>Не зря ведь я учусь на экономиста...</p>
+             </div>
+
+         </div>
+          </div>
+           </div>
+
+       </div>
+   </section>
+    
+    
+          <section class="contacts section" id="vote">
+              <div class="container">
+                  <h3>Мои контакты</h3>
+
+                  <p class="row ways justify-content-center">Ниже представлены пути, как со мной можно связаться:</p>
+                  <div class="row justify-content-center text-center mt-5">
+                      <div class="contacts_item col-8 col-lg-2">
+                          <img class="mb-sm-1 mt-sm-5" src="img/%D0%B3%D0%B5%D0%BE.png" alt="Моя геолокация">
+                          <p>Екатеринбург</p>
+                      </div>
+                      <div class="contacts_item col-8 col-lg-2">
+                          <img class="mb-sm-1 mt-sm-5" src="img/%D0%BA%D0%BE%D0%BD%D0%B2%D0%B5%D1%80%D1%82.png" alt="Моя почта">
+                          <a class="call_me" href="mailto: kubm2016@gmail.com"><p>kubm2016@gmail.com</p></a>
+                      </div>
+                      <div class="contacts_item col-8 col-lg-2">
+                          <img class="mb-sm-1 mt-sm-5" src="img/%D1%82%D1%80%D1%83%D0%B1%D0%B0.png" alt="Мой номер">
+                          <a  class="call_me d-block" href="tel:+77777777777"><p class="call_me">77777777777</p></a>
+                      </div>
+                  </div>
+              </div>
+              <div class="your_message">
+                  <h4>Оставьте мне послание</h4>
+              </div>
+
+              <form class="form container" id="formmer" action="php/mail.php" method="post">
+
+
+                  <input class="name col-8 col-sm-5 col-lg-3" type="text" name="text_input" value="" placeholder="Ваше имя" autocomplete="on" required>
+                  <input class="name col-8 col-sm-5 mt-3 col-lg-3" type="email" name="email_input" value="" placeholder="Ваша электронная почта" autocomplete="on" required>
+                  <div class="row justify-content-center">
+                      <textarea class="col-8 col-sm-6" name="name1" id="" cols="30" rows="10" placeholder="Ваше сообщение"></textarea>
+                  </div>
+                  <div class="row justify-content-center">
+                      <input class="send col-5 col-sm-3 col-md-3 mt-3" type="submit" name="submit2" value="Отправить">
+                  </div>
+              </form>
+
+              <a href="https://vk.com/away.php?utf=1&to=https%3A%2F%2Fwww.instagram.com%2Fmatvei_kublanov%2F%3Fr%3Dnametag" target="blank"><img src="img/%D0%B8%D0%BD%D1%81%D1%82.png" alt="Тут инст"></a>
+              <a href="https://vk.com/mkublanov" target="blank"><img src="img/%D0%A1%D0%BB%D0%BE%D0%B9%201.png" alt="Тут vk"></a>
+          </section> 
+    
+    <footer class="copyright">
+         <div class="row m-0 justify-content-center">
+         <span class="SMM1">Instagram: <a href="https://www.instagram.com/matvei_kublanov/" target="blank">https://www.instagram.com/matvei_kublanov/</a></span>
+          
+         <span class="SMM2">Вконтакте: <a href="https://vk.com/mkublanov" target="blank">https://vk.com/mkublanov</a></span>
+       </div>
+         <h class="col-12 text-truncate">Copyright©Матвей Кубланов. Design by Web</h>
+    </footer>
+  
+</main>
+  <script src="js/jquery-3.6.1.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/bootstrap.bundle.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
+<script src="js/jquery.magnific-popup.min.js"></script>
+<script src="js/wow.min.js"></script>
+<script src="js/jquery.maskedinput.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+  <script>
+      var swiper = new Swiper(".mySwiper", {
+        rewind: true,
+          spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: {
+          delay: 6000,
+          disableOnInteraction: Boolean,
+        },
+          slidesPerView: 1,
+        spaceBetween: 30,
+        keyboard: {
+          enabled: true,
+        },
+        
+          pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
+<script src="js/myScript.js"></script>
+
+</body>
+</html>
